@@ -1,0 +1,72 @@
+---
+---
+
+<header>
+<img class="logo" src="images/logo.webp" alt="">
+<ul>
+    <li><a href="">Flyinformation</a></li>
+    <li><a href="">Praktisk</a></li>
+    <li><a href="">Parkering</a></li>
+    <li><a href="">Butikker & Spisesteder</a></li>
+</ul>
+<div class="flex-right">
+    <img class="taxfree" src="images/taxfree.webp" alt="">
+    <a href="">Log ind</a>
+    <button class="language">
+        <div></div>
+        <div>&#x25BC;</div>
+    </button>
+    <div class="search"></div>
+</div>
+</header>
+
+<style>
+    header {
+     padding: 16px 32px;
+     display: flex;
+     justify-content: center;
+     gap: 88px;
+     align-items: center;
+     border-bottom: 2px solid var(--grey-lighter);
+    }
+    img {
+        align-self: center;
+    }
+    .logo {
+        max-width:54px;
+    }
+    ul {
+        display: flex;
+        gap: 44px;
+    }
+    a {
+        color: var(--cph-blue);
+    }
+    .flex-right {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+    .taxfree {
+        max-width: 76px;
+    }
+    .search {
+        height: 50px;
+        aspect-ratio: 1;
+        background: var(--grey-lighter);
+        border-radius: 1e3px;
+    }
+    .language {
+        display: flex;
+        border: none;
+        align-items: center;
+        gap: 8px;
+    }
+    .language :first-child {
+        height: 30px;
+        aspect-ratio: 1;
+        background: red;
+        border-radius: 1e3px;
+    }
+
+</style>
