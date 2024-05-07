@@ -1,0 +1,218 @@
+/* Fonts*/
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url("../fonts/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Open Sans"), local("OpenSans"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans"), local("OpenSans"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Open Sans Extra Bold"), local("OpenSans-ExtraBold"), url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
+}
+
+/* Reset */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+}
+
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+img {
+  inline-size: 100%;
+  height: auto;
+  display: block;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border-radius: 0;
+  color: inherit;
+  background: transparent;
+}
+
+input,
+button,
+textarea {
+  font-size: max(1em, 16px);
+}
+
+a,
+button,
+[type="button"],
+[type="submit"] {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #000, 0 0 0 4px #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    transition-duration: 0.01s;
+    animation: 0.01s;
+    scroll-behavior: auto;
+  }
+}
+
+:root {
+  /* Colors */
+  --dark-blue: #141b32;
+  --cph-blue: #071143;
+  --light-blue: #1349a4;
+  --dark-yellow: #ffbb03;
+  --cph-yellow: #fecb00;
+  --light-yellow: #fedb55;
+  --cph-white: #fff;
+  --grey-lighter: #dfe3e6;
+  --grey-light: #a4a8ad;
+  --grey-mid: #7e8a94;
+  --grey-dark: #5b646d;
+  --grey-text: #333333;
+
+  /* Font-weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-x-bold: 800;
+
+  /* Font-sizes */
+  --fs-1: 3.375rem; /* 54px */
+  --fs-2: 2.8125rem; /* 45px */
+  --fs-3: 2.3rem; /* 36,8px */
+  --fs-4: 2rem; /* 32px */
+  --fs-5: 1.625rem; /* 26px */
+  --fs-6: 1.3rem; /* 20,8px */
+  --fs-large: 1.125rem; /* 18px */
+  --fs-p: 1rem;
+  --fs-small: 0.9375rem; /* 14px */
+  --fs-smaller: 0.75rem; /* 12px */
+
+  --ff-open: "Open sans", sans-serif;
+  --ff-frutiger: "Frutiger", sans-serif;
+
+  font-family: var(--ff-open), var(--ff-frutiger), sans-serif;
+}
+
+/* General */
+h1 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-semi-bold);
+}
