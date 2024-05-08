@@ -1,0 +1,15 @@
+---
+const { cardIcon, cardTitle, cardDescription, targetLocation } = Astro.props;
+import logo from "../images/logo.webp";
+---
+
+<a href={targetLocation} class="">
+  <div
+    class="flex flex-col shadow-xl p-10 justify-center items-center rounded-xl"
+  >
+    <!-- Temporary src logo until we import all logos needed -->
+    <img src={logo.src} width={50} height={50} />
+    <p class="font-bold mt-2">{cardTitle}</p>
+    <p class="text-small">{cardDescription}</p>
+  </div>
+</a>

@@ -5,6 +5,7 @@ import "../css/main.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
 import heroImage from "../images/temp.jpg";
+import FrontPageCard from "../components/FrontPageCard.astro";
 ---
 
 <MainLayout title="Kundeservice">
@@ -14,6 +15,33 @@ import heroImage from "../images/temp.jpg";
     heroImage={heroImage}
     heroImageAlt="temp alt text"
   />
+
+  <div class="grid grid-cols-2 gap-5 px-10 max-w-[1024px] mx-auto">
+    <FrontPageCard
+      cardIcon=""
+      cardTitle="Parkering"
+      cardDescription="Se og verificér din parkering her"
+      targetLocation="/parkering"
+    />
+    <FrontPageCard
+      cardIcon=""
+      cardTitle="Security"
+      cardDescription="Læs om vigtig information og sikkerhed her"
+      targetLocation="/security"
+    />
+    <FrontPageCard
+      cardIcon=""
+      cardTitle="Hittegods"
+      cardDescription="Tjek om dine ejendele er registreret hos os"
+      targetLocation="/hittegods"
+    />
+    <FrontPageCard
+      cardIcon=""
+      cardTitle="Kontakt"
+      cardDescription="Henvendelse vedrørende CPH lufthavne"
+      targetLocation="/kontakt"
+    />
+  </div>
 </MainLayout>
 
 <style></style>

@@ -18,6 +18,18 @@ export default {
       "grey-dark": "var(--grey-dark)",
       "grey-text": "var(--grey-text)",
     },
+    fontSize: {
+      1: "var(--fs-1)",
+      2: "var(--fs-2)",
+      3: "var(--fs-3)",
+      4: "var(--fs-4)",
+      5: "var(--fs-5)",
+      6: "var(--fs-6)",
+      large: "var(--fs-large)",
+      p: "var(--fs-p)",
+      small: "var(--fs-small)",
+      smaller: "var(--fs-smaller)",
+    },
     extend: {
       fontFamily: {
         sans: ['"Open Sans"', ...defaultTheme.fontFamily.sans],
