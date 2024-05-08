@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+
+const { heroTitle, heroDescription, heroImage, heroImageAlt } = Astro.props;
+---
+
+<section class="flex justify-between max-h-[300px]">
+  <div class="flex justify-end items-center p-4 w-1/2 bg-grey-lighter">
+    <div class="max-w-[400px] w-full">
+      <a class="text-light-blue font-bold" href="/">KUNDESERVICE</a>
+      <h1 class="font-bold text-cph-blue">{heroTitle}</h1>
+      <p class="text-cph-blue">{heroDescription}</p>
+    </div>
+  </div>
+  <div class="w-1/2">
+    <Image
+      src={heroImage}
+      alt={heroImageAlt}
+      class="object-cover max-h-[300px]"
+    />
+  </div>
+</section>
+
+<style></style>

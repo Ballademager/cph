@@ -25,7 +25,7 @@
 
   /* Font-sizes */
   --fs-1: 3.375rem; /* 54px */
-  --fs-2: 2.8125rem; /* 45px */
+  --fs-2: 2.5rem; /* 40px */
   --fs-3: 2.3rem; /* 36,8px */
   --fs-4: 2rem; /* 32px */
   --fs-5: 1.625rem; /* 26px */
@@ -44,5 +44,5 @@
 /* General */
 h1 {
   font-size: var(--fs-2);
-  font-weight: var(--fw-semi-bold);
+  font-weight: var(--fw-bold);
 }
