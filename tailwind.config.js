@@ -1,4 +1,4 @@
-import defaultConfig from "tailwindcss/defaultConfig";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -18,8 +18,10 @@ export default {
       "grey-dark": "var(--grey-dark)",
       "grey-text": "var(--grey-text)",
     },
-    fontFamily: {
-      sans: ['"Open Sans"', ...defaultConfig.theme.fontFamily.sans],
+    extend: {
+      fontFamily: {
+        sans: ['"Open Sans"', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   plugins: [],

@@ -1,15 +1,19 @@
 ---
 const description = "";
-const url ="";
+const url = "";
 import "../css/main.css";
-import MainLayout from '../layouts/MainLayout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import heroImage from "../images/temp.jpg";
 ---
 
 <MainLayout title="Kundeservice">
-           <h1>hej</h1>
+  <Hero
+    heroTitle="Kundeservice"
+    heroDescription="Temporary Text"
+    heroImage={heroImage}
+    heroImageAlt="temp alt text"
+  />
 </MainLayout>
 
-
-<style>
-
-</style>
+<style></style>
