@@ -1,4 +1,63 @@
-/* No Reset needed, since Tailwind applies reset automatically. */
+/* Fonts*/
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local("Open Sans Light"),
+    local("OpenSans-Light"),
+    url("../fonts/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Open Sans"),
+    local("OpenSans"),
+    url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local("Open Sans Medium"),
+    local("OpenSans-Medium"),
+    url("../fonts/OpenSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local("Open Sans SemiBold"),
+    local("OpenSans-SemiBold"),
+    url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local("Open Sans Bold"),
+    local("OpenSans-Bold"),
+    url("../fonts/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src:
+    local("Open Sans Extra Bold"),
+    local("OpenSans-ExtraBold"),
+    url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
+}
 
 :root {
   /* Colors */
@@ -33,19 +92,16 @@
   --fs-6: 1.3rem; /* 20,8px */
   --fs-large: 1.125rem; /* 18px */
   --fs-p: 1rem;
-  --fs-small: 0.9375rem; /* 14px */
+  --fs-small: 0.875rem; /* 14px */
   --fs-smaller: 0.75rem; /* 12px */
 
   --ff-open: "Open Sans", sans-serif;
   --ff-frutiger: "Frutiger", sans-serif;
-
-  /* font-family: var(--ff-open), var(--ff-frutiger), sans-serif; */
 }
 
 /* General */
 h1 {
   font-size: var(--fs-2);
-  font-weight: var(--fw-bold);
 }
 main {
   min-height: 60dvh;
