@@ -6,6 +6,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
 import heroImage from "../images/temp.jpg";
 import FrontPageCard from "../components/FrontPageCard.astro";
+import { FAQ } from "../components/FAQ";
 ---
 
 <MainLayout title="Kundeservice">
@@ -42,6 +43,27 @@ import FrontPageCard from "../components/FrontPageCard.astro";
       targetLocation="/kontakt"
     />
   </div>
+
+  <FAQ
+    client:load
+    faqQuestions={[
+      {
+        question: "Hvordan kontakter jeg kundeservice?",
+        answer:
+          "Du kan kontakte kundeservice på telefon 12345678 eller på mail",
+      },
+      {
+        question: "Hvordan kontakter jeg kundeservice?",
+        answer:
+          "Du kan kontakte kundeservice på telefon 12345678 eller på mail",
+      },
+      {
+        question: "Hvordan kontakter jeg kundeservice?",
+        answer:
+          "Du kan kontakte kundeservice på telefon 12345678 eller på mail",
+      },
+    ]}
+  />
 </MainLayout>
 
 <style></style>
