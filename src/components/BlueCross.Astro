@@ -1,7 +1,30 @@
 ---
-
+import bluecross from "../images/bluecross.webp";
 ---
 
-<div></div>
+<div class="cross-container">
+    <img src={bluecross.src} alt="hvor er billedet">
+    <p>Uafhentede genstande doneres til Blå Kors, som hjælper udsatte børn, unge og voksne i Danmark.</p>
+</div>
 
-<style></style>
+<style>
+    .cross-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 32px 36px;
+        margin: 16px;
+        max-width: 550px;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 13px;
+
+        & p {
+            max-width: 444px;
+        }
+    }
+    img {
+        max-width: 234px;
+        height: auto;
+    }
+</style>
