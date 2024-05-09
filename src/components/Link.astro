@@ -1,0 +1,16 @@
+---
+const {href, linkText} = Astro.props;
+---
+
+<a href={href}>{linkText}</a>
+
+<style>
+a {
+    background: var(--cph-blue);
+    color: var(--cph-white);
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-large);
+    padding: 10px 44px;
+    border-radius: 5px;
+}
+</style>
