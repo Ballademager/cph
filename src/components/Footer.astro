@@ -1,0 +1,157 @@
+---
+import app from "../images/mobileapp.webp";
+import appstore from "../images/appstore.svg";
+import playstore from "../images/playstore.svg";
+import facebook from "../images/facebook.webp";
+import x from "../images/x.webp";
+import instagram from "../images/instagram.webp";
+import linkedin from "../images/linkedin.webp";
+import youtube from "../images/youtube.webp";
+import logoWhite from "../images/CPH_logo_white.webp";
+
+---
+
+<footer>
+<div class="upper">
+    <div class="lists">
+        <ul>
+            <li><a href="/">KUNDESERVICE</a></li>
+            <li><a href="">Shopping</a></li>
+            <li><a href="/parkering/">Parkering</a></li>
+            <li><a href="/hittegods/">Hittegods</a></li>
+            <li><a href="/kontakt/">Klager</a></li>
+            <li><a href="/kontakt/">Kontakt kundeservice</a></li>
+            <li><a href="">Kontrolrapporter</a></li>
+            <li><a href="">CPH Airport app</a></li>
+        </ul>
+        <ul>
+            <li><a href="">OM CPH</a></li>
+            <li><a href="">Job i CPH</a></li>
+            <li><a href="">Presse</a></li>
+            <li><a href="">Investor</a></li>
+            <li><a href="">Organisation</a></li>
+            <li><a href="">Klima & miljø</a></li>
+            <li><a href="">Udviklingsplaner</a></li>
+            <li><a href="">Airport Tours</a></li>
+        </ul>
+        <ul>
+            <li><a href="">CPH BUSINESS</a></li>
+            <li><a href=""></a>Shopping Center</li>
+            <li><a href="">Advertising in CPH</a></li>
+            <li><a href="">Aviation</a></li>
+            <li><a href="">Real Estate Sales</a></li>
+            <li><a href="">Adgang og færdsel</a></li>
+            <li><a href="">CPH NOW</a></li>
+            <li><a href="">Indkøb og Bygge- & Anlægsprojekter</a></li>
+            <li><a href="">Firmaparkering</a></li>
+        </ul>
+    </div>
+    <div class="ads">
+    <div class="app">
+        <img src={app.src} alt="telefon som viser app">
+        <div class="getapps">
+            <p>Download CPH App</p>
+            <img src={appstore.src} alt="App store">
+            <img src={playstore.src} alt="Google play">
+        </div>
+    </div>
+    <div class="socials">
+        <img src={facebook.src} alt="facebook">
+        <img src={instagram.src} alt="instagram">
+        <img src={x.src} alt="x">
+        <img src={linkedin.src} alt="linkedin">
+        <img src={youtube.src} alt="youtube">
+    </div>
+    </div>
+</div>
+<div class="lower">
+    <div>
+        <p>© 2021 Københavns Lufthavne A/S - Lufthavnsboulevarden 6 - 2770 Kastrup - Denmark · CVR 14 70 72 04</p>
+        <ul>
+            <li><a href="">Cookiepolitik</a></li>
+            <li><a href="">Privatlivspolitik</a></li>
+            <li><a href="">Vilkår for hjemmeside</a></li>
+            <li><a href="">Vilkår for CPH app</a></li>
+        </ul>
+    </div>
+    <img src={logoWhite.src} alt="">
+</div>
+</footer>
+
+<style>
+    .upper {
+        display: flex;
+        justify-content: space-evenly;
+        background: var(--cph-blue);
+        padding: 60px 20px 40px;
+    }
+    .lists {
+        display: flex;
+    }
+    .upper ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 228px;
+        color: var(--cph-white);
+        font-size: var(--fs-small);
+    }
+    .ads {
+        padding-top: 32px;
+    }
+    .app {
+        display: flex;
+        background: var(--footer-blue);
+        min-width: max-content;
+        border-radius: 10px;
+        padding: 15px 25px 0 5px;
+        margin-block: 35px 70px;
+
+
+        & > img {
+            margin-top: -50px;
+        }
+        & p {
+            font-size: var(--fs-smaller);
+            font-weight: var(--fw-bold);
+            color: var(--cph-white);
+            margin-bottom: 14px;
+        }
+        & .getapps img {
+            height: 36px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .socials {
+        display: flex;
+        justify-content: space-between;
+
+        & img {
+            width: auto;
+            height: 32px;
+        }
+    }
+    .lower {
+        padding: 32px 40px;
+        display: flex;
+        justify-content: space-between;
+        background: var(--footer-blue);
+        color: var(--cph-white);
+        font-size: var(--fs-smaller);
+
+        & > div {
+            display: grid;
+            gap: 8px;
+        }
+
+        & ul {
+        display: flex;
+        gap: 12px;
+        }
+        & img {
+            height: 60px;
+        }
+    }
+
+</style>
