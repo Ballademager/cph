@@ -5,6 +5,7 @@
   --dark-blue: #141b32;
   --cph-blue: #071143;
   --light-blue: #1349a4;
+  --footer-blue: #40496d;
   --dark-yellow: #ffbb03;
   --cph-yellow: #fecb00;
   --light-yellow: #fedb55;
@@ -45,4 +46,7 @@
 h1 {
   font-size: var(--fs-2);
   font-weight: var(--fw-bold);
+}
+main {
+  min-height: 60dvh;
 }
