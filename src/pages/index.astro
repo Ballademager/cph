@@ -4,6 +4,7 @@ const url = "";
 import "../css/main.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
+import Grid from "../components/Grid.astro";
 import heroImage from "../images/temp.jpg";
 import FrontPageCard from "../components/FrontPageCard.astro";
 import { FAQ } from "../components/FAQ";
@@ -17,7 +18,7 @@ import { FAQ } from "../components/FAQ";
     heroImageAlt="temp alt text"
   />
 
-  <div class="grid grid-cols-2 gap-5 px-10 max-w-[1024px] mx-auto">
+  <Grid type="2+2" class="px-10 max-w-[1024px] mx-auto gap-5">
     <FrontPageCard
       cardIcon=""
       cardTitle="Parkering"
@@ -42,7 +43,7 @@ import { FAQ } from "../components/FAQ";
       cardDescription="Henvendelse vedrørende CPH lufthavne"
       targetLocation="/kontakt"
     />
-  </div>
+  </Grid>
 
   <FAQ
     client:load
