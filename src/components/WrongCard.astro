@@ -1,0 +1,52 @@
+---
+const {cardTitle, cardText, href, cardImage} = Astro.props;
+---
+
+<a href={href} class="redirect-card">
+    <img src={cardImage.src} alt="">
+    <div class="card-content">
+        <h3>{cardTitle}</h3>
+        <p>{cardText}</p>
+        <h4>Gå til <span>kundeservice/{cardTitle}</span></h4>
+    </div>
+</a>
+
+<style>
+    .redirect-card {
+        max-width: 300px;
+        box-shadow: rgba(0, 0, 0, 0.25) 2px 4px 13px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px 12px 16px;
+    }
+    h3 {
+        color: var(--cph-blue);
+        font-weight: var(--fw-semi-bold);
+        font-size: var(--fs-5);
+    }
+    p {
+        font-size: var(--fs-small);
+    }
+    h4 {
+        margin-top: 12px;
+        font-weight: var(--fw-medium);
+        color: var(--grey-text);
+        font-size: var(--fs-p);
+        font-style: italic;
+    }
+    span {
+        color: var(--light-blue);
+        font-weight: var(--fw-semi-bold);
+        text-transform: lowercase;
+    }
+    img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+    }
+</style>
