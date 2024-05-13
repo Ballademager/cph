@@ -1,0 +1,33 @@
+---
+import WrongCard from "./WrongCard.astro"
+import Temp from "../images/temp.jpg";
+---
+
+<div class="wrong-card">
+    <h2>Er du landet på den forkerte side?</h2>
+    <p>Her kan du gå til en af de andre kundeservicesider.</p>
+    <div class="card-list">
+        <WrongCard cardTitle="Parkering" cardText="Find ud af hvad du har brug for at vide omkring parkering i lufthavnen." href="/parkering/" cardImage={Temp} />
+        <WrongCard cardTitle="Security" cardText="Få svar på dine spørgsmål omkring sikkerhedkontrol i lufthavnen." href="/security/" cardImage={Temp} />
+        <WrongCard cardTitle="Hittegods" cardText="Få hjælp hvis du har mistet en genstand i lufthavnen." href="/hittegods/" cardImage={Temp} />
+    </div>
+</div>
+
+<style>
+    .wrong-card {
+
+    }
+    .card-list {
+        margin-top: 16px;
+        display: flex;
+        gap: 44px;
+    }
+    h2 {
+        font-size: var(--fs-4);
+        color: var(--cph-blue);
+        font-weight: var(--fw-semi-bold);
+    }
+    p {
+        font-size: var(--fs-large);
+    }
+</style>
