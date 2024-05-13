@@ -1,0 +1,34 @@
+---
+type GridType = "2+2" | "3+1";
+
+type Props = {
+  type: GridType;
+  class?: string;
+};
+
+const { class: c, type } = Astro.props;
+
+let classes = ["grid"];
+
+if (type === "2+2") {
+  classes.push("grid-cols-2");
+} else if (type === "3+1") {
+  classes.push("grid-cols-3");
+}
+
+if (c) {
+  classes.push(c);
+}
+---
+
+<div class={classes.join(" ")}>
+  <slot />
+
+  {
+    type === "3+1" && (
+      <div style="grid-column: 1/4;">
+        <slot name="third" />
+      </div>
+    )
+  }
+</div>
