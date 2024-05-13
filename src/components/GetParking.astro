@@ -1,0 +1,49 @@
+---
+import Link from "./Link.astro";
+import Temp from "../images/temp.jpg";
+---
+
+<div class="get-parking">
+    <div class="get-content">
+        <h2>Skal du bestille parkering?</h2>
+        <p>Kundeservice kan hjælpe dig, hvis du har spørgsmål eller udfordringer omkring parkering. <br>Hvis du endnu ikke har bestilt parkering kan du gøre dette på parkeringssiden.</p>
+        <Link href="https://www.cph.dk/parkering-transport" linkText="Bestil Parkering"/>
+    </div>
+    <div class="img-container">
+        <img src={Temp.src} alt="">
+    </div>
+</div>
+
+<style>
+.get-parking {
+    display: flex;
+    gap: 16px;
+}
+.get-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+}
+h2 {
+    font-size: var(--fs-4);
+    font-weight: var(--fw-semi-bold);
+    color: var(--cph-blue);
+}
+p {
+    font-size: var(--fs-large);
+    max-width: 70ch;
+}
+.img-container {
+    width: 324px;
+    height: inherit;
+    overflow: hidden;
+    position: relative;
+}
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
