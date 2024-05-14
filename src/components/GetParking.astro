@@ -1,6 +1,7 @@
 ---
 import Link from "./Link.astro";
 import Temp from "../images/temp.jpg";
+import { Image } from "astro:assets";
 ---
 
 <div class="get-parking">
@@ -10,7 +11,7 @@ import Temp from "../images/temp.jpg";
         <Link href="https://www.cph.dk/parkering-transport" linkText="Bestil Parkering"/>
     </div>
     <div class="img-container">
-        <img src={Temp.src} alt="">
+        <Image src={Temp} alt="Temporary image">
     </div>
 </div>
 
