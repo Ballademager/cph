@@ -8,9 +8,27 @@ import Heading1andP from "../components/Heading1andP.astro";
 
 <MainLayout title="Kundeservice/hittegods">
     <Heading1andP  pageHeading="Har du mistet noget i lufthavnen?" paragraph="På listen nedenfor kan du finde alle indleverede genstande, som registreret af hittegods. Genstandene beholdes i 3 døgn efter vi har modtaget dem, hvorefter de sendes til politiets hittegodsafdeling."/>
+    <div>
+        <h2>Fandt du ikke din genstand på listen?</h2>
+        <p>Mindre værdifulde genstand, som for eksempel tøj og bøger registreres ikke, men opbevares af hittegods i 4 uger. Se mere information i spørgsmål og svar i bunden af siden. </p>
+        <p>Nogle typer genstande, som for eksempel pas og penge, sendes direkte til Københavns Politis hittegodskontor. Se mere information i spørgsmål og svar i bunden af siden.</p>
+    </div>
 </MainLayout>
 
 
 <style>
+    h2 {
+        color: var(--cph-blue);
+        font-size: var(--fs-4);
+        font-weight: var(--fw-semi-bold);
+    }
+    p {
+        color:var(--grey-text) ;
+        font-size: var(--fs-large);
+        text-wrap: pretty;
 
+        &:not(:first-of-type) {
+            margin-top: 16px;
+        }
+    }
 </style>
