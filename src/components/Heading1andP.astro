@@ -1,0 +1,21 @@
+---
+const {pageHeading, paragraph} = Astro.props;
+---
+
+<div>
+    <h1>{pageHeading}<h1/>
+    <p>{paragraph}</p>
+</div>
+
+<style>
+    h1 {
+        color: var(--cph-blue);
+        font-size: var(--fs-2);
+        font-weight: var(--fw-semi-bold);
+    }
+    p {
+        color:var(--grey-text) ;
+        font-size: var(--fs-large);
+        text-wrap: pretty;
+    }
+</style>
