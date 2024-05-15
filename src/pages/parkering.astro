@@ -8,7 +8,6 @@ import ThreeoneCard2 from "../components/ThreeoneCard2.astro";
 import Hero from "../components/Hero.astro";
 import heroImage from "../images/temp.jpg";
 import Grid from "../components/Grid.astro";
-import HalfnHalf from "../components/HalfnHalf.astro";
 import GetParking from "../components/GetParking.astro";
 ---
 
@@ -20,30 +19,30 @@ import GetParking from "../components/GetParking.astro";
     heroImageAlt="temp alt text"
   />
   <main>
-  <Grid type="3+1" class="px-10 max-w-[1024px] mx-auto gap-3 py-5">
-    <ThreeoneCard1
-      cardTitle="Handicapparkering"
-      cardDescription="I CPH Airport er der mulighed for handicapparkering. Du kan finde den information du skal bruge her. "
-      targetLocation=""
-    />
-    <ThreeoneCard1
-      cardTitle="Print kvittering"
-      cardDescription="Har du brug for at printe din kvittering fra din seneste parkering i Københavns Lufthavn, så kan du kontakte vores kundeservice ved at klikke her."
-      targetLocation=""
-    />
-    <ThreeoneCard1
-      cardTitle="Klagevejledning"
-      cardDescription="Har du brug for klage skal du kontakte kundeservice. Du finder mere information på denne side. "
-      targetLocation=""
-    />
-    <ThreeoneCard2
-      slot="third"
-      cardTitle="Læs om vores købsbetingelser for CPH Parkering, SteamRex ApS og din fortrydelsesret. "
-      cardDescription="Linket her åbner en pop-up boks i dit browservindue."
-      targetLocation=""
-    />
-  </Grid>
-  <GetParking />
+    <Grid type="3+1" class="px-10 max-w-[1024px] mx-auto gap-3 py-5">
+      <ThreeoneCard1
+        cardTitle="Handicapparkering"
+        cardDescription="I CPH Airport er der mulighed for handicapparkering. Du kan finde den information du skal bruge her. "
+        targetLocation=""
+      />
+      <ThreeoneCard1
+        cardTitle="Print kvittering"
+        cardDescription="Har du brug for at printe din kvittering fra din seneste parkering i Københavns Lufthavn, så kan du kontakte vores kundeservice ved at klikke her."
+        targetLocation=""
+      />
+      <ThreeoneCard1
+        cardTitle="Klagevejledning"
+        cardDescription="Har du brug for klage skal du kontakte kundeservice. Du finder mere information på denne side. "
+        targetLocation=""
+      />
+      <ThreeoneCard2
+        slot="third"
+        cardTitle="Læs om vores købsbetingelser for CPH Parkering, SteamRex ApS og din fortrydelsesret. "
+        cardDescription="Linket her åbner en pop-up boks i dit browservindue."
+        targetLocation=""
+      />
+    </Grid>
+    <GetParking />
   </main>
 </MainLayout>
 
