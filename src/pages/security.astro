@@ -3,13 +3,26 @@ const description = "";
 const url ="";
 import "../css/main.css";
 import MainLayout from '../layouts/MainLayout.astro';
+import Hero from "../components/Hero.astro";
+import heroImage from "../images/temp.jpg";
 ---
 
-<MainLayout title="Kundeservice/security">
-           <h1>hej</h1>
+<MainLayout title="Kundeservice/hittegods">
+    <Hero
+    heroTitle="Security"
+    heroDescription="Temporary Text"
+    heroImage={heroImage}
+    heroImageAlt="temp alt text"
+  />
+    <main>
+        <div class="px-10 max-w-[768px] mx-auto py-5">
+            <HalfnHalf
+              cardTitle="CPH APP Mega Cool"
+              cardDescription="Discover our all-in-one platform that simplifies project management, team collaboration, and task automation."
+              targetLocation=""
+            />
+          </div>
+    </main>
 </MainLayout>
 
-
-<style>
-
-</style>
+<style></style>
