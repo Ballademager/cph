@@ -1,0 +1,106 @@
+---
+
+---
+
+<form action="">
+    <legend>Kontakt Kundeservice</legend>
+
+    <div class="form-flex">
+        <label for="category">Kategori</label>
+        <select name="category" id="category" required>
+            <option value="emne">Vælg emne</option>
+            <option value="parkering">Parkering</option>
+            <option value="feedback">Feedback/forslag</option>
+            <option value="klager">Klager</option>
+            <option value="persondata">Persondata</option>
+            <option value="andet">Andet</option>
+        </select>
+        <label for="subject">Emne</label>
+        <input type="text" id="subject">
+        <label for="description">Beskrivelse</label>
+        <textarea id="description" rows="5" cols="33" ></textarea>
+        <h4>Kontaktinformation</h4>
+        <label for="firstName">Fornavn <span>*</span></label>
+        <input type="text" id="firstName" required>
+        <label for="surName">Efternavn <span>*</span></label>
+        <input type="text" id="surName" required>
+        <label for="email">E-mail <span>*</span></label>
+        <input type="text" id="email" required>
+        <label for="phone">Telefon</label>
+        <input type="text" id="phone">
+        <label for="emailOnly">Kontakt mig venligst kun via email</label>
+        <input type="checkbox" name="" id="emailOnly">
+    </div>
+    <button type="submit">Send</button>
+</form>
+
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 32px 40px;
+        border-radius: 10px;
+        max-width: 1024px;
+        margin: 4rem;
+        box-shadow: 0px 2px 20px 4px rgba(102, 102, 102, 0.22);
+
+    }
+    .form-flex {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 16px;
+        column-gap: 2%;
+        /* margin-block: 32px; */
+    }
+    legend {
+        color: var(--cph-blue);
+        font-size: var(--fs-3);
+        font-weight: var(--fw-semi-bold);
+    }
+    h4 {
+        margin-top: 24px;
+        color: black;
+        font-size: var(--fs-p);
+        font-weight: var(--fw-bold);
+        flex-basis: 100%;
+    }
+    label {
+        flex-basis: 25%;
+        color: var(--grey-dark);
+        font-size: var(--fs-p);
+    }
+    input, select, textarea {
+        flex-basis: 73%;
+        border: 1px solid var(--grey-light);
+        border-radius: 5px;
+        padding: 2px 4px;
+
+        &:focus {
+            outline-color: var(--light-blue);
+        }
+    }
+    input[type="checkbox"] {
+        display: grid;
+        justify-content: start;
+        flex-basis: 20px;
+        height: 20px;
+        accent-color: var(--light-blue);
+    }
+    label span {
+        color: red;
+    }
+    label[for="emailOnly"] {
+        font-size: var(--fs-smaller);
+    }
+    button {
+        background: var(--cph-blue);
+        color: var(--cph-white);
+        font-weight: var(--fw-semi-bold);
+        font-size: var(--fs-large);
+        padding: 10px 44px;
+        border-radius: 5px;
+        align-self: center;
+        margin-top: 32px;
+    }
+</style>
