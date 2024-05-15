@@ -1,9 +1,10 @@
 ---
 const description = "";
-const url ="";
+const url = "";
 import "../css/main.css";
-import MainLayout from '../layouts/MainLayout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
 import Heading1andP from "../components/Heading1andP.astro";
+import LostAndFound from "../components/LostAndFound.jsx";
 import Hero from "../components/Hero.astro";
 import heroImage from "../images/temp.jpg";
 ---
@@ -16,29 +17,41 @@ import heroImage from "../images/temp.jpg";
     heroImageAlt="temp alt text"
   />
     <main>
-        <Heading1andP  pageHeading="Har du mistet noget i lufthavnen?" paragraph="På listen nedenfor kan du finde alle indleverede genstande, som registreret af hittegods. Genstandene beholdes i 3 døgn efter vi har modtaget dem, hvorefter de sendes til politiets hittegodsafdeling."/>
-    <div>
-        <h2>Fandt du ikke din genstand på listen?</h2>
-        <p>Mindre værdifulde genstand, som for eksempel tøj og bøger registreres ikke, men opbevares af hittegods i 4 uger. Se mere information i spørgsmål og svar i bunden af siden. </p>
-        <p>Nogle typer genstande, som for eksempel pas og penge, sendes direkte til Københavns Politis hittegodskontor. Se mere information i spørgsmål og svar i bunden af siden.</p>
-    </div>
+      <Heading1andP
+    pageHeading="Har du mistet noget i lufthavnen?"
+    paragraph="På listen nedenfor kan du finde alle indleverede genstande, som registreret af hittegods. Genstandene beholdes i 3 døgn efter vi har modtaget dem, hvorefter de sendes til politiets hittegodsafdeling."
+  />
+  <div>
+    <h2>Fandt du ikke din genstand på listen?</h2>
+    <p>
+      Mindre værdifulde genstand, som for eksempel tøj og bøger registreres
+      ikke, men opbevares af hittegods i 4 uger. Se mere information i spørgsmål
+      og svar i bunden af siden.
+    </p>
+    <p>
+      Nogle typer genstande, som for eksempel pas og penge, sendes direkte til
+      Københavns Politis hittegodskontor. Se mere information i spørgsmål og
+      svar i bunden af siden.
+    </p>
+  </div>
     </main>
+
+  <LostAndFound client:load />
 </MainLayout>
 
-
 <style>
-    h2 {
-        color: var(--cph-blue);
-        font-size: var(--fs-4);
-        font-weight: var(--fw-semi-bold);
-    }
-    p {
-        color:var(--grey-text) ;
-        font-size: var(--fs-large);
-        text-wrap: pretty;
+  h2 {
+    color: var(--cph-blue);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-semi-bold);
+  }
+  p {
+    color: var(--grey-text);
+    font-size: var(--fs-large);
+    text-wrap: pretty;
 
-        &:not(:first-of-type) {
-            margin-top: 16px;
-        }
+    &:not(:first-of-type) {
+      margin-top: 16px;
     }
+  }
 </style>
