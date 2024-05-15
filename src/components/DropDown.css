@@ -60,6 +60,15 @@ nav > * {
     color: var(--cph-blue);
   }
 }
+.dropdown-list li a[href="/"] {
+  font-weight: var(--fw-semi-bold);
+  color: var(--grey-text);
+  color: var(--light-blue);
+
+  &:hover {
+    color: var(--dark-blue);
+  }
+}
 .link-container {
   display: flex;
   flex-direction: column;
