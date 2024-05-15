@@ -3,60 +3,42 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
-  src:
-    local("Open Sans Light"),
-    local("OpenSans-Light"),
-    url("../fonts/OpenSans-Light.ttf") format("truetype");
+  src: local("Open Sans Light"), local("OpenSans-Light"), url("../fonts/OpenSans-Light.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src:
-    local("Open Sans"),
-    local("OpenSans"),
-    url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  src: local("Open Sans"), local("OpenSans"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 500;
-  src:
-    local("Open Sans Medium"),
-    local("OpenSans-Medium"),
-    url("../fonts/OpenSans-Medium.ttf") format("truetype");
+  src: local("Open Sans Medium"), local("OpenSans-Medium"), url("../fonts/OpenSans-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
-  src:
-    local("Open Sans SemiBold"),
-    local("OpenSans-SemiBold"),
-    url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  src:
-    local("Open Sans Bold"),
-    local("OpenSans-Bold"),
-    url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 800;
-  src:
-    local("Open Sans Extra Bold"),
-    local("OpenSans-ExtraBold"),
-    url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
+  src: local("Open Sans Extra Bold"), local("OpenSans-ExtraBold"), url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
 }
 
 :root {
@@ -106,8 +88,13 @@ h1 {
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-width: 1024px;
   margin-inline: auto;
   padding-block: 40px;
   min-height: 60dvh;
+
+  @media (width<1024px) {
+    padding: 40px 16px;
+  }
 }
