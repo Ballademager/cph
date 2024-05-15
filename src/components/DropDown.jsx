@@ -3,8 +3,7 @@ import "./DropDown.css";
 export default function DropDown({ item }) {
   const flyinformationContent = {
     title: "Flyinformation",
-    description:
-      "Find nemt alle afgange og ankomster og få et overblik over flyselskaber.",
+    description: "Find nemt alle afgange og ankomster og få et overblik over flyselskaber.",
     links: [{ text: "Find dit fly", href: "" }],
     lists: [
       [
@@ -30,13 +29,12 @@ export default function DropDown({ item }) {
 
   const praktiskContent = {
     title: "Praktisk",
-    description:
-      "Få det fulde overblik og information om alt praktisk i lufthavnen - fra pas- og visumregler til håndtering af bagage.",
+    description: "Få det fulde overblik og information om alt praktisk i lufthavnen - fra pas- og visumregler til håndtering af bagage.",
     links: [{ text: "Find dit fly", href: "" }],
     lists: [
       [
         { text: "I lufthavnen", href: "" },
-        { text: "Kundeservice", href: "" },
+        { text: "Kundeservice", href: "/" },
         { text: "Gode råd til rejsende", href: "" },
         { text: "Check-in", href: "" },
         { text: "Bagage", href: "" },
@@ -63,8 +61,7 @@ export default function DropDown({ item }) {
 
   const parkeringContent = {
     title: "Parkering",
-    description:
-      "Når parkeringen er på plads, kan rejsen starte. Book parkering online og spar både tid og penge. Tjek alle muligheder og priser her.",
+    description: "Når parkeringen er på plads, kan rejsen starte. Book parkering online og spar både tid og penge. Tjek alle muligheder og priser her.",
     links: [
       { text: "Book parkering", href: "" },
       { text: "Handicapparkering", href: "" },
@@ -101,8 +98,7 @@ export default function DropDown({ item }) {
 
   const butikkerSpisestederContent = {
     title: "Butikker & Spisesteder",
-    description:
-      "Nyd tiden i lufthavnen med god mad og fantastisk shopping. Her findes der noget for enhver smag!",
+    description: "Nyd tiden i lufthavnen med god mad og fantastisk shopping. Her findes der noget for enhver smag!",
     links: [{ text: "TAX FREE", href: "" }],
     lists: [
       [
@@ -121,13 +117,7 @@ export default function DropDown({ item }) {
         { text: "Familie", href: "" },
         { text: "Bestil mad online", href: "" },
       ],
-      [
-        { text: "Services" },
-        { text: "Home Delivery", href: "" },
-        { text: "Valuta & moms", href: "" },
-        { text: "Lounges & workspaces", href: "" },
-        { text: "Airport Doctor", href: "" },
-      ],
+      [{ text: "Services" }, { text: "Home Delivery", href: "" }, { text: "Valuta & moms", href: "" }, { text: "Lounges & workspaces", href: "" }, { text: "Airport Doctor", href: "" }],
     ],
   };
 
@@ -146,15 +136,11 @@ export default function DropDown({ item }) {
       content = butikkerSpisestederContent;
       break;
     default:
-      content = flyinformationContent; // Default to flyinformationContent
+      content = flyinformationContent;
   }
 
   return (
-    <nav
-      className="dropdown-menu"
-      onMouseEnter={() => {}}
-      onMouseLeave={() => {}}
-    >
+    <nav className="dropdown-menu" onMouseEnter={() => {}} onMouseLeave={() => {}}>
       <div className="dropdown-text">
         <h3>{content.title}</h3>
         <p>{content.description}</p>
