@@ -14,20 +14,35 @@ import Temp from "../images/temp.jpg";
 </div>
 
 <style>
-    .wrong-card {
-
-    }
     .card-list {
         margin-top: 16px;
         display: flex;
         gap: 44px;
+
+        @media (width<1024px) {
+            gap: 16px;
+        }
+        @media (width<768px) {
+            flex-wrap: wrap;
+        }
     }
     h2 {
         font-size: var(--fs-4);
         color: var(--cph-blue);
         font-weight: var(--fw-semi-bold);
+
+        @media (width<1024px){
+            font-size: var(--fs-5);
+        }
+        @media (width<340px) {
+            font-size: var(--fs-6);
+        }
     }
     p {
         font-size: var(--fs-large);
+
+        @media (width<1024px) {
+            font-size: var(--fs-p);
+        }
     }
 </style>
