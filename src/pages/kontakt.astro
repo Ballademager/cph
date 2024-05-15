@@ -4,10 +4,20 @@ const url ="";
 import "../css/main.css";
 import MainLayout from '../layouts/MainLayout.astro';
 import WrongPage from "../components/WrongPage.astro";
+import Hero from "../components/Hero.astro";
+import heroImage from "../images/temp.jpg";
 ---
 
 <MainLayout title="Kundeservice/kontakt">
-<WrongPage/>
+    <Hero
+    heroTitle="Kontakt"
+    heroDescription="Temporary Text"
+    heroImage={heroImage}
+    heroImageAlt="temp alt text"
+  />
+<main>
+    <WrongPage/>
+</main>
 </MainLayout>
 
 

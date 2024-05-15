@@ -19,7 +19,7 @@ import GetParking from "../components/GetParking.astro";
     heroImage={heroImage}
     heroImageAlt="temp alt text"
   />
-
+  <main>
   <Grid type="3+1" class="px-10 max-w-[1024px] mx-auto gap-3 py-5">
     <ThreeoneCard1
       cardTitle="Handicapparkering"
@@ -43,15 +43,8 @@ import GetParking from "../components/GetParking.astro";
       targetLocation=""
     />
   </Grid>
-
-  <div class="px-10 max-w-[768px] mx-auto py-5">
-    <HalfnHalf
-      cardTitle="CPH APP Mega Cool"
-      cardDescription="Discover our all-in-one platform that simplifies project management, team collaboration, and task automation."
-      targetLocation=""
-    />
-  </div>
   <GetParking />
+  </main>
 </MainLayout>
 
 <style></style>
