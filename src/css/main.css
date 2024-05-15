@@ -104,5 +104,10 @@ h1 {
   font-size: var(--fs-2);
 }
 main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  margin-inline: auto;
+  padding-bottom: 40px;
   min-height: 60dvh;
 }
