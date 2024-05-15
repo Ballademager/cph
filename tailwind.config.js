@@ -31,6 +31,9 @@ export default {
       smaller: "var(--fs-smaller)",
     },
     extend: {
+      boxShadow: {
+        card: "0px 0px 15px 0px rgba(0, 0, 0, 0.15)",
+      },
       fontFamily: {
         sans: ['"Open Sans"', ...defaultTheme.fontFamily.sans],
       },
