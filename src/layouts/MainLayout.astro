@@ -25,18 +25,9 @@ import Footer from "../components/Footer.astro";
   </head>
   <body>
     <Header client:load />
-    <main class="pb-10">
       <slot />
-    </main>
     <Footer />
   </body>
 </html>
 
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    max-width: 1024px;
-    margin-inline: auto;
-  }
-</style>
+<style></style>
