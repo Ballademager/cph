@@ -31,19 +31,33 @@ import phone from "../images/phone.svg"
         box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 13px;
         border-radius: 10px;
         width: max-content;
-        margin: 32px;
 
+        @media (width<640px) {
+            width: fit-content;
+        }
     }
     .opening-hours {
         display: flex;
         align-items: end;
         gap: 16px;
+        row-gap: 4px;
 
         & :first-child {
             align-self: center;
+
+            @media (width<640px) {
+                align-self: end;
+            }
         }
         & > p:last-child {
             margin-left: 24px;
+            @media (width<640px) {
+                margin-left: 40px;
+            }
+        }
+
+        @media (width<640px) {
+            flex-wrap: wrap;
         }
     }
     .line {
@@ -52,6 +66,15 @@ import phone from "../images/phone.svg"
      }
      .line .line {
         gap: 4px;
+
+        @media (width<640px) {
+            gap: 16px;
+        }
+     }
+     .line:has(.line) {
+        @media (width<640px) {
+            flex-direction: column;
+        }
      }
      h3 {
          color: var(--cph-blue);
