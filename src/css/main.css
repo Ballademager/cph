@@ -108,6 +108,6 @@ main {
   flex-direction: column;
   max-width: 1024px;
   margin-inline: auto;
-  padding-bottom: 40px;
+  padding-block: 40px;
   min-height: 60dvh;
 }
