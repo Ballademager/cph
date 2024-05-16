@@ -12,10 +12,24 @@ const {pageHeading, paragraph} = Astro.props;
         color: var(--cph-blue);
         font-size: var(--fs-2);
         font-weight: var(--fw-semi-bold);
+        @media (width<1024px) {
+        font-size: var(--fs-3);
+        line-height: 120%;
+    }
+        @media (width<640px) {
+        font-size: var(--fs-4);
+    }
+        @media (width<482px) {
+        font-size: var(--fs-5);
+    }
     }
     p {
         color:var(--grey-text) ;
         font-size: var(--fs-large);
         text-wrap: pretty;
+
+        @media (width<1024px) {
+        font-size: var(--fs-p);
+    }
     }
 </style>
