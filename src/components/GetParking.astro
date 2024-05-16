@@ -30,16 +30,31 @@ h2 {
     font-size: var(--fs-4);
     font-weight: var(--fw-semi-bold);
     color: var(--cph-blue);
+
+    @media (width<1024px) {
+        font-size: var(--fs-5);
+    }
+    @media (width<482px) {
+        font-size: var(--fs-6);
+    }
 }
 p {
     font-size: var(--fs-large);
     max-width: 70ch;
+
+    @media (width<1024px) {
+        font-size: var(--fs-p);
+    }
 }
 .img-container {
     width: 324px;
     height: inherit;
     overflow: hidden;
     position: relative;
+
+    @media (width<640px) {
+        display: none;
+    }
 }
 img {
     position: absolute;
