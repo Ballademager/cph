@@ -13,14 +13,19 @@ import bluecross from "../images/bluecross.webp";
         flex-direction: column;
         gap: 24px;
         padding: 32px 36px;
-        margin: 16px;
         max-width: 550px;
         align-items: center;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 13px;
+        align-self: center;
 
         & p {
             max-width: 444px;
+        }
+
+        @media (width<340px) {
+            padding: 24px 32px;
+            gap: 16px;
         }
     }
     img {
