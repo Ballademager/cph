@@ -66,8 +66,13 @@ import logoWhite from "../images/CPH_logo_white.webp";
 </div>
 <div class="lower">
     <div>
-        <p>© 2021 Københavns Lufthavne A/S - Lufthavnsboulevarden 6 - 2770 Kastrup - Denmark · CVR 14 70 72 04</p>
-        <ul>
+        <ul class="small-gap-list">
+            <li>© 2021 Københavns Lufthavne A/S<span> - </span></li>
+            <li> Lufthavnsboulevarden 6 <span> - </span></li>
+            <li>2770 Kastrup <span> - </span></li>
+            <li>Denmark <span> · </span></li>
+            <li>CVR 14 70 72 04</li></ul>
+        <ul class="gap-list">
             <li><a href="">Cookiepolitik</a></li>
             <li><a href="">Privatlivspolitik</a></li>
             <li><a href="">Vilkår for hjemmeside</a></li>
@@ -148,15 +153,44 @@ import logoWhite from "../images/CPH_logo_white.webp";
         & > div {
             display: grid;
             gap: 8px;
-        }
 
-        & ul {
+            @media (width<660px) {
+                gap: 24px;
+            }
+        }
+        & .small-gap-list {
+            display: flex;
+            gap: 4px;
+
+            @media (width<660px) {
+                flex-direction: column;
+
+                & li span {
+                    display: none;
+                }
+            }
+        }
+        & .gap-list {
         display: flex;
         gap: 12px;
+
+            @media (width<482px) {
+                    flex-direction: column;
+                    gap: 6px;
+            }
         }
         & img {
             height: 60px;
-        }
+
+            @media (width<768px) {
+                align-self: end;
+            }
     }
 
+        @media (width<768px) {
+            flex-direction: column;
+            gap: 32px;
+            padding: 24px 24px;
+        }
+    }
 </style>
