@@ -43,6 +43,13 @@ import heroImage from "../images/temp.jpg";
     color: var(--cph-blue);
     font-size: var(--fs-4);
     font-weight: var(--fw-semi-bold);
+
+    @media (width<1024px) {
+        font-size: var(--fs-5);
+    }
+    @media (width<482px) {
+        font-size: var(--fs-6);
+    }
   }
   p {
     color: var(--grey-text);
@@ -51,6 +58,10 @@ import heroImage from "../images/temp.jpg";
 
     &:not(:first-of-type) {
       margin-top: 16px;
+    }
+
+    @media (width<1024px) {
+        font-size: var(--fs-p);
     }
   }
 </style>
