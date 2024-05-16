@@ -18,7 +18,7 @@
         <label for="subject">Emne</label>
         <input type="text" id="subject">
         <label for="description">Beskrivelse</label>
-        <textarea id="description" rows="5" cols="33" ></textarea>
+        <textarea id="description" rows="5"  ></textarea>
         <h4>Kontaktinformation</h4>
         <label for="firstName">Fornavn <span>*</span></label>
         <input type="text" id="firstName" required>
@@ -28,8 +28,10 @@
         <input type="text" id="email" required>
         <label for="phone">Telefon</label>
         <input type="text" id="phone">
-        <label for="emailOnly">Kontakt mig venligst kun via email</label>
-        <input type="checkbox" name="" id="emailOnly">
+        <div class="flex-contents">
+            <label for="emailOnly">Kontakt mig venligst kun via email</label>
+            <input type="checkbox" name="" id="emailOnly">
+        </div>
     </div>
     <button type="submit">Send</button>
 </form>
@@ -38,23 +40,40 @@
     form {
         display: flex;
         flex-direction: column;
+        align-self: stretch;
         gap: 40px;
         padding: 32px 40px;
         border-radius: 10px;
         max-width: 1024px;
         box-shadow: 0px 2px 20px 4px rgba(102, 102, 102, 0.22);
 
+        @media (width<640px) {
+            padding: 16px 24px;
+            gap: 16px;
+        }
     }
     .form-flex {
         display: flex;
         flex-wrap: wrap;
         row-gap: 16px;
         column-gap: 2%;
+
+        @media (width<640px) {
+            flex-direction: column;
+            row-gap: 4px;
+        }
     }
     legend {
         color: var(--cph-blue);
         font-size: var(--fs-3);
         font-weight: var(--fw-semi-bold);
+
+        @media (width<640px) {
+            font-size: var(--fs-4);
+        }
+        @media (width<482px) {
+            font-size: var(--fs-6);
+        }
     }
     h4 {
         margin-top: 24px;
@@ -78,11 +97,21 @@
             outline-color: var(--light-blue);
         }
     }
+    .flex-contents {
+        display: contents;
+
+        @media (width<640px) {
+            margin-top: 24px;
+            display: flex;
+            gap: 32px;
+        }
+    }
     input[type="checkbox"] {
         display: grid;
         justify-content: start;
         flex-basis: 20px;
         height: 20px;
+        width: 20px;
         accent-color: var(--light-blue);
     }
     label span {
@@ -90,6 +119,10 @@
     }
     label[for="emailOnly"] {
         font-size: var(--fs-smaller);
+
+        @media (width<640px) {
+            min-width: max-content;
+        }
     }
     button {
         background: var(--cph-blue);
@@ -100,5 +133,9 @@
         border-radius: 5px;
         align-self: center;
         margin-top: 32px;
+
+        @media (width<640px) {
+            font-size: var(--fs-p);
+        }
     }
 </style>
