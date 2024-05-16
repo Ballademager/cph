@@ -36,7 +36,7 @@ import logoWhite from "../images/CPH_logo_white.webp";
         </ul>
         <ul>
             <li><a href="">CPH BUSINESS</a></li>
-            <li><a href=""></a>Shopping Center</li>
+            <li><a href="">Shopping Center</a></li>
             <li><a href="">Advertising in CPH</a></li>
             <li><a href="">Aviation</a></li>
             <li><a href="">Real Estate Sales</a></li>
@@ -88,13 +88,17 @@ import logoWhite from "../images/CPH_logo_white.webp";
     .lists {
         display: flex;
     }
-    .upper ul {
+    .lists ul {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        width: 228px;
+        width: 222px;
         color: var(--cph-white);
         font-size: var(--fs-small);
+
+        & li:first-child {
+            font-weight: var(--fw-bold);
+        }
     }
     .ads {
         padding-top: 32px;
