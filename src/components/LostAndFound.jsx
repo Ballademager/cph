@@ -3,6 +3,7 @@ import LostAndFoundCard from "./LostAndFoundCard";
 import Drop from "./Drop";
 import { getItems } from "../supabase/getItems";
 import { useState, useEffect } from "react";
+import Pagination from "./Pagination";
 
 function randomPlace() {
   const places = [
@@ -17,19 +18,25 @@ function randomPlace() {
 }
 
 export default function LostAndFound() {
-  const [items, setItems] = useState(false);
+  const [items, setItems] = useState([]);
+  const [page, setPage] = useState(1);
+  const [pageSize] = useState(6);
+  const [totalItems, setTotalItems] = useState(0);
 
   useEffect(() => {
     (async () => {
-      const res = await getItems();
+      const res = await getItems(page, pageSize);
 
       if (res.data && !res.error) {
         setItems(res.data);
+        setTotalItems(res.count);
       } else {
         setItems([]);
       }
+      console.log("Items: ", res.data); //Debug line
+      console.log("Total items: ", res.count); //Debug line
     })();
-  }, []);
+  }, [page, pageSize]);
 
   return (
     <section className="px-10 max-w-[1024px] w-full mx-auto">
@@ -97,6 +104,18 @@ export default function LostAndFound() {
         <div className="grid w-full gap-3 grid-cols-2">
           {items &&
             items.map((item) => <LostAndFoundItem key={item.i} item={item} />)}
+        </div>
+
+        <div className="p-10">
+          <Pagination
+            currentPage={page}
+            totalCount={totalItems}
+            pageSize={pageSize}
+            onPageChange={(page) => {
+              console.log("Changing to page: ", page);
+              setPage(page);
+            }}
+          />
         </div>
       </LostAndFoundCard>
     </section>
