@@ -1,4 +1,4 @@
-nav {
+.dropdown-menu {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
   z-index: 1;
 }
-nav > * {
+.dropdown-menu > * {
   display: flex;
   flex-direction: column;
   width: 264px;
