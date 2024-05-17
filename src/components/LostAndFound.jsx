@@ -106,7 +106,7 @@ export default function LostAndFound() {
             items.map((item) => <LostAndFoundItem key={item.i} item={item} />)}
         </div>
 
-        <div className="p-10">
+        <div>
           <Pagination
             currentPage={page}
             totalCount={totalItems}
