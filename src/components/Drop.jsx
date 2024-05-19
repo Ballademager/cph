@@ -2,7 +2,13 @@ import { useState } from "react";
 import clsx from "clsx";
 import { useClickAway } from "@uidotdev/usehooks";
 
-export default function Drop({ title, options, hideArrow }) {
+export default function Drop({
+  selected,
+  title,
+  options,
+  hideArrow,
+  onSelect,
+}) {
   const [dropdown, setDropdown] = useState(false);
 
   const ref = useClickAway(() => {
@@ -12,7 +18,7 @@ export default function Drop({ title, options, hideArrow }) {
   return (
     <div className="relative" ref={ref}>
       <button
-        class="text-white border-grey-lighter border-[1px] font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+        class="text-white border-grey-lighter border-[1px] font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
         type="button"
         onClick={() => setDropdown(!dropdown)}
       >
@@ -43,10 +49,20 @@ export default function Drop({ title, options, hideArrow }) {
         )}
       >
         <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
-          {options.map((sort) => (
-            <li key={sort}>
-              <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                {sort}
+          {options.map((item, i) => (
+            <li key={item}>
+              <a
+                className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 cursor-pointer select-none"
+                onClick={() => {
+                  onSelect?.(i);
+                  setDropdown(false);
+                }}
+              >
+                {selected === i && (
+                  <div className="size-2 rounded-full bg-light-blue" />
+                )}
+
+                {item}
               </a>
             </li>
           ))}
