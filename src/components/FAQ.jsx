@@ -12,7 +12,7 @@ const FAQQuestion = ({
 
   return (
     <li
-      className="shadow-xl p-10 rounded-xl cursor-pointer"
+      className="shadow-xl px-10 py-8 rounded-xl cursor-pointer"
       onClick={() => {
         setOpen(isOpen ? -1 : i);
         setHeight(contentRef.current.clientHeight);
@@ -62,12 +62,12 @@ export function FAQ({ faqQuestions }) {
   const [open, setOpen] = useState(-1);
 
   return (
-    <div className="grid p-10 max-w-[1024px] mx-auto">
+    <div className="grid py-10 w-full">
       <div>
-        <h2 className="text-large font-bold">
+        <h2 className="text-4 font-bold text-cph-blue py-3">
           Skal du bruge hjælp til noget andet?
         </h2>
-        <p className="text-small">
+        <p className="text-p">
           Her kan du se hvor du skal henvende dig med spørgsmål om de ting
           kundeservice ikke hjælper med.
         </p>

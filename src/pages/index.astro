@@ -17,55 +17,55 @@ import { FAQ } from "../components/FAQ";
     heroImage={heroImage}
     heroImageAlt="temp alt text"
   />
-<main>
-  <Grid type="2+2" class="px-10 max-w-[1024px] mx-auto gap-5">
-    <FrontPageCard
-      cardIcon=""
-      cardTitle="Parkering"
-      cardDescription="Se og verificér din parkering her"
-      targetLocation="/parkering"
-    />
-    <FrontPageCard
-      cardIcon=""
-      cardTitle="Security"
-      cardDescription="Læs om vigtig information og sikkerhed her"
-      targetLocation="/security"
-    />
-    <FrontPageCard
-      cardIcon=""
-      cardTitle="Hittegods"
-      cardDescription="Tjek om dine ejendele er registreret hos os"
-      targetLocation="/hittegods"
-    />
-    <FrontPageCard
-      cardIcon=""
-      cardTitle="Kontakt"
-      cardDescription="Henvendelse vedrørende CPH lufthavne"
-      targetLocation="/kontakt"
-    />
-  </Grid>
+  <main>
+    <Grid type="2+2" class="gap-5 w-full">
+      <FrontPageCard
+        cardIcon=""
+        cardTitle="Parkering"
+        cardDescription="Se og verificér din parkering her"
+        targetLocation="/parkering"
+      />
+      <FrontPageCard
+        cardIcon=""
+        cardTitle="Security"
+        cardDescription="Læs om vigtig information og sikkerhed her"
+        targetLocation="/security"
+      />
+      <FrontPageCard
+        cardIcon=""
+        cardTitle="Hittegods"
+        cardDescription="Tjek om dine ejendele er registreret hos os"
+        targetLocation="/hittegods"
+      />
+      <FrontPageCard
+        cardIcon=""
+        cardTitle="Kontakt"
+        cardDescription="Henvendelse vedrørende CPH lufthavne"
+        targetLocation="/kontakt"
+      />
+    </Grid>
 
-  <FAQ
-    client:load
-    faqQuestions={[
-      {
-        question: "Hvordan kontakter jeg kundeservice?",
-        answer:
-          "Du kan kontakte kundeservice på telefon 12345678 eller på mail",
-      },
-      {
-        question: "Hvordan kontakter jeg kundeservice?",
-        answer:
-          "Du kan kontakte kundeservice på telefon 12345678 eller på mail",
-      },
-      {
-        question: "Hvordan kontakter jeg kundeservice?",
-        answer:
-          "Du kan kontakte kundeservice på telefon 12345678 eller på mail",
-      },
-    ]}
-  />
-</main>
+    <FAQ
+      client:load
+      faqQuestions={[
+        {
+          question: "Hvordan kontakter jeg kundeservice?",
+          answer:
+            "Du kan kontakte kundeservice på telefon 12345678 eller på mail",
+        },
+        {
+          question: "Hvordan kontakter jeg kundeservice?",
+          answer:
+            "Du kan kontakte kundeservice på telefon 12345678 eller på mail",
+        },
+        {
+          question: "Hvordan kontakter jeg kundeservice?",
+          answer:
+            "Du kan kontakte kundeservice på telefon 12345678 eller på mail",
+        },
+      ]}
+    />
+  </main>
 </MainLayout>
 
 <style></style>
