@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { CSSTransition } from "react-transition-group";
 import DropDown from "./DropDown";
 import InnerList from "./InnerList";
 import "./Header.css";
@@ -8,6 +9,10 @@ export default function Header() {
   const timeoutRef = useRef(null);
   const [screenWidth, setScreenWidth] = useState(0);
   const [active, setActive] = useState(false);
+  const [liOneActive, setLiOneActive] = useState(false);
+  const [liTwoActive, setLiTwoActive] = useState(false);
+  const [liThreeActive, setLiThreeActive] = useState(false);
+  const [liFourActive, setLiFourActive] = useState(false);
 
   const mouseEnter = (item) => {
     setShowDropDown(item);
@@ -44,6 +49,30 @@ export default function Header() {
       };
     }
   }, []);
+
+  useEffect(() => {
+    if (active) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [active]);
+
+  function handleBurgerClick() {
+    setActive((old) => !old);
+  }
+  function handleLiOneClick() {
+    setLiOneActive((old) => !old);
+  }
+  function handleLiTwoClick() {
+    setLiTwoActive((old) => !old);
+  }
+  function handleLiThreeClick() {
+    setLiThreeActive((old) => !old);
+  }
+  function handleLiFourClick() {
+    setLiFourActive((old) => !old);
+  }
 
   return (
     <header>
