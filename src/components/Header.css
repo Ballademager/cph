@@ -37,10 +37,13 @@ header {
 .flex-right {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 16px;
 
   & a {
     color: var(--cph-blue);
+  }
+
+  @media (width<1024px) {
   }
 }
 .taxfree {
@@ -49,8 +52,16 @@ header {
 .search {
   height: 50px;
   aspect-ratio: 1;
+  display: grid;
+  place-items: center;
   background: var(--grey-lighter);
   border-radius: 1e3px;
+  cursor: pointer;
+
+  @media (width<1024px) {
+    height: 34px;
+    background: none;
+  }
 }
 .language {
   display: flex;
