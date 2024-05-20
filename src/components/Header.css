@@ -13,9 +13,22 @@ header {
   & > img {
     align-self: center;
   }
+
+  @media (width<1124px) {
+    gap: 44px;
+  }
+  @media (width<1024px) {
+    justify-content: space-between;
+    padding: 12px 32px;
+    height: 62px;
+  }
 }
 .logo {
   max-width: 54px;
+
+  @media (width<1024px) {
+    max-width: 34px;
+  }
 }
 .upper-li {
   display: flex;
@@ -74,6 +87,94 @@ header {
   aspect-ratio: 1;
   background: red;
   border-radius: 1e3px;
+}
+.burger-menu {
+  cursor: pointer;
+  z-index: 999999;
+  transition: 0.8s cubic-bezier(0.77, 0.45, 0.3, 1);
+
+  &.active {
+    position: fixed;
+  }
+
+  &.active > * {
+    transition: 0.8s cubic-bezier(0.77, 0.45, 0.3, 1);
+  }
+}
+:is(.bar1, .bar2, .bar3) {
+  display: block;
+  width: 30px;
+  height: 3px;
+  border-radius: 1e3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--dark-blue);
+}
+.active .bar2 {
+  opacity: 0;
+}
+.active .bar1 {
+  transform: translateY(7px) rotate(45deg);
+}
+.active .bar3 {
+  transform: translateY(-9px) rotate(-45deg);
+}
+.mobile-menu {
+  position: fixed;
+  z-index: 2;
+  background: white;
+  inset: 0;
+  width: 100dvw;
+  height: 100dvh;
+  top: -100%;
+  transition: 0.5s cubic-bezier(0.77, 0.45, 0.3, 1);
+  overflow-y: scroll;
+
+  &.active {
+    top: 0;
+  }
+}
+.no-scroll {
+  overflow: hidden;
+}
+.top-row {
+  height: 62px;
+  display: flex;
+  align-items: center;
+  padding-inline: 32px;
+  border-bottom: 1px solid var(--grey-lighter);
+}
+.outer-list > li {
+  border-bottom: 1px solid var(--grey-lighter);
+  display: grid;
+}
+.outer-list li p {
+  padding: 24px 30px;
+  color: var(--cph-blue);
+}
+.menu-item p::after,
+.menu-item p::before {
+  position: absolute;
+  right: 40px;
+  content: " ";
+  height: 22px;
+  width: 2px;
+  background-color: var(--light-blue);
+  transition: transform 0.5s;
+  align-self: center;
+}
+.menu-item.active {
+  background: #edf0f1;
+}
+.menu-item p::after {
+  transform: rotate(-90deg);
+}
+.menu-item.active p::after {
+  transform: rotate(-45deg);
+}
+.menu-item.active p::before {
+  transform: rotate(45deg);
 }
 .link-ul {
   background: var(--cph-white);
