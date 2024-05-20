@@ -32,7 +32,8 @@ export default {
     },
     extend: {
       boxShadow: {
-        card: "0px 0px 15px 0px rgba(0, 0, 0, 0.15)",
+        card: "rgba(0, 0, 0, 0.15) 0px 0px 15px 0px ",
+        boxbox: "rgba(0, 0, 0, 0.2) 0px 4px 12px 2px",
       },
       fontFamily: {
         sans: ['"Open Sans"', ...defaultTheme.fontFamily.sans],
