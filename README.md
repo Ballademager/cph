@@ -1,4 +1,4 @@
-# Astro Starter Kit: Minimal
+# TEMP UPDATER READ ME
 
 ```sh
 npm create astro@latest -- --template minimal
