@@ -45,23 +45,43 @@ import { FAQ } from "../components/FAQ";
       />
     </Grid>
 
-    <FAQ
-      client:load
+    <FAQ client:load headlineText="Skal du bruge hjælp til noget andet?" paragraphText="Her kan du se hvor du skal henvende dig med spørgsmål om de ting kundeservice ikke hjælper med."
+
       faqQuestions={[
         {
-          question: "Hvordan kontakter jeg kundeservice?",
+          question: "Hvor meget bagage må jeg have med?",
           answer:
-            "Du kan kontakte kundeservice på telefon 12345678 eller på mail",
+            "Antallet af indcheckede bagagestykker, håndbagage og personlige genstande varierer afhængigt af din billettype, destination og de specifikke regler fastsat af dit flyselskab. Derfor anbefaler vi, at du læser nærmere på dit flyselskabs hjemmeside for yderligere information. Du kan finde linket til dit flyselskabs hjemmeside samt eventuelle kontaktoplysninger linket nedenfor.",
+            text:"Flyselskaber",
+            hyperRef: "https://www.cph.dk/flyinformation/flyselskaber"
+          },
+        {
+          question: "Hvornår skal jeg checke ind i lufthavnen?",
+          answer:
+            "Du bør altid ankomme til lufthavnen i god tid inden din afgang, da der kan forekomme kø ved check-in, sikkerhedskontrol og paskontrol. Vi anbefaler generelt at ankomme til lufthavnen 2 1/2 timer før afgang på flyvninger inden for Schengen-området og 3 timer før for flyvninger uden for Schengen-området. Bemærk venligst, at disse tider henviser til den første destination på din rejse. For eksempel, hvis du har et mellemlanding i Tyskland på en flyvning til Asien, anbefaler vi at ankomme 2 1/2 timer før afgang, da din første destination er inden for Schengen. For yderligere information om afgangsterminaler, check-in, bagageregler og kontaktoplysninger for dit flyselskab kan du på linket nedenfor.",
+            text:"Flyselskaber",
+            hyperRef: "https://www.cph.dk/flyinformation/flyselskaber",
         },
         {
-          question: "Hvordan kontakter jeg kundeservice?",
+          question: "Hvordan kan CPH hjælpe passagerer med usynlige handicap på vej gennem lufthavnen?",
           answer:
-            "Du kan kontakte kundeservice på telefon 12345678 eller på mail",
+            "For at hjælpe rejsende med usynlige handicap såsom ADHD, autisme og ordblindhed har vi indført en ordning i Københavns Lufthavn kaldet Solsikkesnoren. Solsikkesnoren sikrer, at personer med usynlige handicap og diagnoser ikke behøver at forklare sig eller retfærdiggøre deres behov i situationer, hvor angst, stress, forvirring eller behov for hjælp opstår. Alle medarbejdere i lufthavnen, inklusive dem ved check-in og sikkerhedskontrollen, er bekendte med ordningen. Derfor er det blot nødvendigt at bære denne snor om halsen, så vil personalet være opmærksomme på behovet for synlige hensyn. Det er vigtigt at bemærke, at dette ikke betyder, at man automatisk får en hurtigere gennemgang i sikkerhedskontrollen. Hvis nødvendigt, anbefaler vi at bestille assistance. Desværre har vi ikke mulighed for at sende solsikkesnoren ud på forhånd. Hvis du henvender dig til vores informationsskranken i terminalerne, vil de med glæde hjælpe dig med at skaffe en solsikkesnor. Ordningen er gratis, og du kan læse mere om Solsikkesnoren på linket nedenfor.",
+            text:"Læs mere",
+            hyperRef: "https://www.cph.dk/praktisk/rejsende-med-usynlige-handicap",
         },
         {
-          question: "Hvordan kontakter jeg kundeservice?",
+          question: "Min bagage var ikke med mit fly, da jeg landede i CPH, hvad gør jeg?",
           answer:
-            "Du kan kontakte kundeservice på telefon 12345678 eller på mail",
+            "Hvis din bagage ikke ankommer med flyet, skal du straks rapportere det til ankomstservice i bagageområdet, inden du forlader lufthavnen. Når du udfylder rapporten, skal du sørge for at have din bagagekvittering med, som viser stregkoden og destinationskoden, samt dit boardingkort eller rejsebevis. Det er vigtigt at beskrive din mistede bagage så detaljeret som muligt, inklusive dens udseende. Hvis du allerede har forladt lufthavnen, skal du kontakte handlingselskabet for det flyselskab, du har fløjet med, og rapportere den mistede bagage. Du kan finde oplysninger om, hvilket handlingselskab der håndterer dit flyselskab via dette link. Du kan finde kontaktinformationen til handlingselskaberne på linket nedenfor.",
+            text:"Handlingselskaber",
+            hyperRef: "https://www.cph.dk/flyinformation/handlingselskaber",
+        },
+        {
+          question: "Hvad er TAX-FREE Shoppens åbningstider?",
+          answer:
+            "Den store TAX-FREE Main Shop, som du passerer umiddelbart efter sikkerhedskontrollen, har døgnåbent hver dag, ligesom deres afdeling ved bagageudleveringen. De øvrige mindre TAX-FREE Shop-afdelinger har mere begrænsede åbningstider, så vi anbefaler at benytte den store TAX-FREE Shop for at være på den sikre side. Du kan altid finde de specifikke åbningstider for deres forskellige afdelinger ved at klikke på linket nedenfor.",
+            text:"TAX FREE",
+            hyperRef: "https://www.cph.dk/butikker-spisesteder/tax-free",
         },
       ]}
     />

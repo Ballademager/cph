@@ -1,10 +1,6 @@
 import { useState, useRef } from "react";
 
-const FAQQuestion = ({
-  open: { open, setOpen },
-  question: { question, answer },
-  i,
-}) => {
+const FAQQuestion = ({ open: { open, setOpen }, question: { question, answer, text, hyperRef }, i }) => {
   const [height, setHeight] = useState(0);
   const contentRef = useRef(null);
 
@@ -58,19 +54,14 @@ const FAQQuestion = ({
   );
 };
 
-export function FAQ({ faqQuestions }) {
+export function FAQ({ faqQuestions, headlineText, paragraphText }) {
   const [open, setOpen] = useState(-1);
 
   return (
     <div className="grid py-10 w-full">
       <div>
-        <h2 className="text-4 font-bold text-cph-blue py-3">
-          Skal du bruge hjælp til noget andet?
-        </h2>
-        <p className="text-p">
-          Her kan du se hvor du skal henvende dig med spørgsmål om de ting
-          kundeservice ikke hjælper med.
-        </p>
+        <h2 className="text-5 sm:text-4 font-bold text-cph-blue py-3">{headlineText}</h2>
+        <p className="text-p md:text-large">{paragraphText}</p>
       </div>
       <div>
         <ul>
