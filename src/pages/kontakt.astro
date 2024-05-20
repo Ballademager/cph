@@ -1,30 +1,27 @@
 ---
 const description = "";
-const url ="";
+const url = "";
 import "../css/main.css";
-import MainLayout from '../layouts/MainLayout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
 import WrongPage from "../components/WrongPage.astro";
 import Hero from "../components/Hero.astro";
-import heroImage from "../images/temp.jpg";
+import heroImage from "../images/heroKontakt.jpg";
 import ContactForm from "../components/ContactForm.astro";
 import Contact from "../components/Contact.astro";
 ---
 
 <MainLayout title="Kundeservice/kontakt">
-    <Hero
+  <Hero
     heroTitle="Kontakt"
     heroDescription="Temporary Text"
     heroImage={heroImage}
     heroImageAlt="temp alt text"
   />
-<main>
-    <ContactForm/>
-    <Contact/>
-    <WrongPage/>
-</main>
+  <main>
+    <ContactForm />
+    <Contact />
+    <WrongPage />
+  </main>
 </MainLayout>
 
-
-<style>
-
-</style>
+<style></style>

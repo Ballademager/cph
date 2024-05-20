@@ -1,48 +1,68 @@
 ---
-import WrongCard from "./WrongCard.astro"
-import Temp from "../images/temp.jpg";
+import WrongCard from "./WrongCard.astro";
+import Hittegods from "../images/heroHittegods.jpg";
+import Security from "../images/heroSecurity.jpg";
+import Parkering from "../images/heroParkering.jpg";
 ---
 
 <div class="wrong-card">
-    <h2>Er du landet på den forkerte side?</h2>
-    <p>Her kan du gå til en af de andre kundeservicesider.</p>
-    <div class="card-list">
-        <WrongCard cardTitle="Parkering" cardText="Find ud af hvad du har brug for at vide om parkering i lufthavnen." href="/parkering/" cardImage={Temp} cardAlt="d"/>
-        <WrongCard cardTitle="Security" cardText="Få svar på dine spørgsmål omkring sikkerhedkontrol i lufthavnen." href="/security/" cardImage={Temp} cardAlt="d"/>
-        <WrongCard cardTitle="Hittegods" cardText="Få hjælp hvis du har mistet en genstand i lufthavnen." href="/hittegods/" cardImage={Temp} cardAlt="d"/>
-    </div>
+  <h2>Er du landet på den forkerte side?</h2>
+  <p>Her kan du gå til en af de andre kundeservicesider.</p>
+  <div class="card-list">
+    <WrongCard
+      cardTitle="Parkering"
+      cardText="Find ud af hvad du har brug for at vide om parkering i lufthavnen."
+      href="/parkering/"
+      cardImage={Parkering}
+      cardAlt="d"
+    />
+    <WrongCard
+      cardTitle="Security"
+      cardText="Få svar på dine spørgsmål omkring sikkerhedkontrol i lufthavnen."
+      href="/security/"
+      cardImage={Security}
+      cardAlt="d"
+    />
+    <WrongCard
+      cardTitle="Hittegods"
+      cardText="Få hjælp hvis du har mistet en genstand i lufthavnen."
+      href="/hittegods/"
+      cardImage={Hittegods}
+      cardAlt="d"
+    />
+  </div>
 </div>
 
 <style>
-    .card-list {
-        margin-top: 16px;
-        display: flex;
-        gap: 44px;
+  .card-list {
+    margin-top: 16px;
+    display: flex;
+    gap: 44px;
 
-        @media (width<1024px) {
-            gap: 16px;
-        }
-        @media (width<768px) {
-            flex-wrap: wrap;
-        }
+    @media (width<1024px) {
+      gap: 16px;
     }
-    h2 {
-        font-size: var(--fs-4);
-        color: var(--cph-blue);
-        font-weight: var(--fw-semi-bold);
+    @media (width<768px) {
+      flex-wrap: wrap;
+    }
+  }
+  h2 {
+    font-size: var(--fs-4);
+    color: var(--cph-blue);
+    font-weight: var(--fw-semi-bold);
 
-        @media (width<1024px){
-            font-size: var(--fs-5);
-        }
-        @media (width<340px) {
-            font-size: var(--fs-6);
-        }
+    @media (width<1024px) {
+      font-size: var(--fs-5);
     }
-    p {
-        font-size: var(--fs-large);
+    @media (width<340px) {
+      font-size: var(--fs-6);
+    }
+  }
+  p {
+    font-size: var(--fs-large);
 
-        @media (width<1024px) {
-            font-size: var(--fs-p);
-        }
+    @media (width<1024px) {
+      font-size: var(--fs-p);
     }
+  }
 </style>
