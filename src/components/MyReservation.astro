@@ -1,0 +1,48 @@
+---
+
+---
+
+<div class="w-full">
+  <h2 class="mb-5 text-4 font-bold text-center text-cph-blue">
+    Min reservation
+  </h2>
+  <form>
+    <div class="flex gap-4 justify-center px-10">
+      <div class="mb-6 w-full">
+        <input
+          type="email"
+          id="email"
+          class="block w-full p-3 border border-grey-lighter rounded-md h-14"
+          placeholder="Din e-mailadresse"
+        />
+        <p class="text-small">
+          Den e-mail du brugte, da du foretog din reservation
+        </p>
+      </div>
+      <div class="mb-6 w-full">
+        <input
+          type="text"
+          id="reservationNumber"
+          class="block w-full p-3 border border-grey-lighter rounded-md h-14"
+          placeholder="Dit reservationsnummer"
+        />
+        <p class="text-small">
+          Du finder reservationsnummer i din ordrebekræftelse
+        </p>
+      </div>
+    </div>
+
+    <div class="flex justify-center px-10 flex-col">
+      <button
+        type="button"
+        class="px-4 py-3 text-sm font-semibold text-cph-white bg-cph-blue rounded-md"
+        onclick="console.log('Vis min reservation clicked')"
+      >
+        Vis min reservation
+      </button>
+      <a href="#" class="self-center hover:underline"
+        >Glemt dit reservationsnummer?</a
+      >
+    </div>
+  </form>
+</div>
