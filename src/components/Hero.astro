@@ -5,14 +5,14 @@ const { heroTitle, heroDescription, heroImage, heroImageAlt } = Astro.props;
 ---
 
 <section class="flex justify-between max-h-[300px]">
-  <div class="flex justify-end items-center p-4 w-1/2 bg-grey-lighter">
+  <div class="flex justify-end items-center p-4 w-full sm:w-1/2 bg-grey-lighter">
     <div class="max-w-[400px] w-full">
       <a class="text-light-blue font-bold" href="/">KUNDESERVICE</a>
-      <h1 class="font-bold text-cph-blue">{heroTitle}</h1>
+      <h1 class="font-bold text-cph-blue text-4 sm:text-3 md:text-2">{heroTitle}</h1>
       <p class="text-cph-blue">{heroDescription}</p>
     </div>
   </div>
-  <div class="w-1/2">
+  <div class="hidden sm:block w-1/2">
     <Image
       src={heroImage}
       alt={heroImageAlt}
