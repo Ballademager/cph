@@ -8,6 +8,7 @@ import LostAndFound from "../components/LostAndFound.jsx";
 import Hero from "../components/Hero.astro";
 import heroImage from "../images/heroHittegods.webp";
 import BlueCross from "../components/BlueCross.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <MainLayout title="Kundeservice/hittegods">
@@ -36,7 +37,10 @@ import BlueCross from "../components/BlueCross.astro";
       </p>
     </div>
     <LostAndFound client:load />
-    <BlueCross />
+    <div class="flex gap-2 items-stretch flex-col lg:flex-row">
+      <Contact/>
+      <BlueCross />
+    </div>
   </main>
 </MainLayout>
 
