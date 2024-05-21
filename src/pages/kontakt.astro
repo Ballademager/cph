@@ -13,13 +13,13 @@ import Contact from "../components/Contact.astro";
 <MainLayout title="Kundeservice/kontakt">
   <Hero
     heroTitle="Kontakt"
-    heroDescription="Har du spørgsmål eller brug for hjælp? Kontakt vores kundeservice her"
+    heroDescription="Har du spørgsmål eller brug for hjælp? Kontakt vores kundeservice via vores formular på siden her"
     heroImage={heroImage}
     heroImageAlt="Kontakt os Billede"
   />
   <main>
     <ContactForm />
-    <Contact />
+    <div class="my-12"><Contact /></div>
     <WrongPage />
   </main>
 </MainLayout>
