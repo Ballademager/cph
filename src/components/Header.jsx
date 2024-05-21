@@ -13,6 +13,8 @@ export default function Header() {
   const [liTwoActive, setLiTwoActive] = useState(false);
   const [liThreeActive, setLiThreeActive] = useState(false);
   const [liFourActive, setLiFourActive] = useState(false);
+  const [lang, setLang] = useState("dk");
+  const [isOpen, setIsOpen] = useState(false);
 
   const mouseEnter = (item) => {
     setShowDropDown(item);
@@ -74,6 +76,14 @@ export default function Header() {
     setLiFourActive((old) => !old);
   }
 
+  const switchLanguage = (selectedLang) => {
+    setLang(selectedLang);
+    setIsOpen(false);
+  };
+  const toggleOpen = () => {
+    setIsOpen((prevOpen) => !prevOpen);
+  };
+
   return (
     <header>
       <img className="logo" src="src/images/logo.webp" alt="" />
@@ -98,11 +108,55 @@ export default function Header() {
             </li>
           </ul>
           <div className="flex-right">
-            <img className="taxfree" src="images/taxfree.webp" alt="" />
+            <a href="https://www.taxfree-heinemann.dk/da/cph/" aria-label="Taxfree">
+              <img className="taxfree" src="src/images/taxfree.webp" alt="" />
+            </a>
             <a href="">Log ind</a>
-            <button className="language">
-              <div></div>
-              <div>&#x25BC;</div>
+            <button
+              className="language"
+              onClick={() => {
+                toggleOpen();
+              }}
+              aria-label="change language">
+              <img className="flag" src={`src/images/${lang === "dk" ? "denmark" : "england"}.svg`} alt={lang === "dk" ? "Danish flag" : "English flag"} />
+              <svg
+                width={28}
+                height={28}
+                data-slot="icon"
+                fill="none"
+                stroke-width="3"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                style={{
+                  transform: isOpen ? `rotate(180deg)` : "rotate(0deg)",
+                }}
+                className="transition-transform duration-300 ease-in-out min-w-10">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+              </svg>
+              {isOpen && (
+                <div className="lang-drop">
+                  <ul className="" role="menu">
+                    {lang !== "dk" && (
+                      <li>
+                        <button className="inside-btn" onClick={() => switchLanguage("dk")}>
+                          <img src="src/images/denmark.svg" alt="Danish flag" />
+                          Danish
+                        </button>
+                      </li>
+                    )}
+                    {lang !== "en" && (
+                      <li>
+                        <button className="inside-btn" onClick={() => switchLanguage("en")}>
+                          <img src="src/images/england.svg" alt="English flag" />
+                          English
+                        </button>
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              )}
             </button>
             <div className="search">
               <img src="src/images/search.svg" alt="search on site" />
@@ -121,10 +175,55 @@ export default function Header() {
           </div>
           <nav className={"mobile-menu " + (active ? "active" : "")}>
             <div className="top-row">
-              <button className="language">
-                <div></div>
-                <div>&#x25BC;</div>
+              <button
+                className="language"
+                onClick={() => {
+                  toggleOpen();
+                }}
+                aria-label="change language">
+                <img className="flag" src={`src/images/${lang === "dk" ? "denmark" : "england"}.svg`} alt={lang === "dk" ? "Danish flag" : "English flag"} />
+                <svg
+                  width={28}
+                  height={28}
+                  data-slot="icon"
+                  fill="none"
+                  stroke-width="3"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  style={{
+                    transform: isOpen ? `rotate(180deg)` : "rotate(0deg)",
+                  }}
+                  className="transition-transform duration-300 ease-in-out min-w-10">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                </svg>
+                {isOpen && (
+                  <div className="lang-drop">
+                    <ul className="" role="menu">
+                      {lang !== "dk" && (
+                        <li>
+                          <button className="inside-btn" onClick={() => switchLanguage("dk")}>
+                            <img src="src/images/denmark.svg" alt="Danish flag" />
+                            Danish
+                          </button>
+                        </li>
+                      )}
+                      {lang !== "en" && (
+                        <li>
+                          <button className="inside-btn" onClick={() => switchLanguage("en")}>
+                            <img src="src/images/england.svg" alt="English flag" />
+                            English
+                          </button>
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+                )}
               </button>
+              <a className="ms-4" href="">
+                Log ind
+              </a>
             </div>
             <ul className="outer-list">
               <li className={"menu-item " + (liOneActive ? "active" : "")} onClick={handleLiOneClick}>
@@ -150,6 +249,11 @@ export default function Header() {
                 <CSSTransition in={liFourActive} timeout={300} classNames="inner-list" unmountOnExit>
                   <InnerList itemKey="butikkerSpisestederContent" />
                 </CSSTransition>
+              </li>
+              <li className="taxfree-li">
+                <a href="https://www.taxfree-heinemann.dk/da/cph/" aria-label="Taxfree">
+                  <img className="taxfree" src="src/images/taxfree.webp" alt="" />
+                </a>
               </li>
             </ul>
           </nav>
