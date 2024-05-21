@@ -9,6 +9,10 @@ header {
   .upper-nav {
     display: flex;
     gap: 44px;
+
+    @media (width<1148px) {
+      gap: 32px;
+    }
   }
   & > img {
     align-self: center;
@@ -77,16 +81,38 @@ header {
   }
 }
 .language {
+  position: relative;
   display: flex;
   border: none;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
-.language :first-child {
-  height: 30px;
+.language .flag {
+  height: 36px;
   aspect-ratio: 1;
-  background: red;
   border-radius: 1e3px;
+  border: 1px solid var(--grey-lighter);
+}
+.lang-drop {
+  position: absolute;
+  border-radius: 15px;
+  background: var(--cph-white);
+  border: 1px solid var(--grey-lighter);
+  bottom: -70px;
+  left: -20px;
+  padding: 12px 48px 12px 20px;
+  min-width: max-content;
+}
+.inside-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.inside-btn img {
+  height: 32px;
+  aspect-ratio: 1;
+  border-radius: 1e3px;
+  border: 1px solid var(--grey-lighter);
 }
 .burger-menu {
   cursor: pointer;
@@ -152,6 +178,9 @@ header {
 .outer-list li p {
   padding: 24px 30px;
   color: var(--cph-blue);
+}
+.taxfree-li {
+  padding: 24px 30px;
 }
 .menu-item p::after,
 .menu-item p::before {
