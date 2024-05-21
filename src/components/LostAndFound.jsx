@@ -130,7 +130,7 @@ export default function LostAndFound() {
           />
         </div>
 
-        <div className="grid w-full gap-3 grid-cols-2">
+        <div className="grid w-full gap-3 md:grid-cols-2 grid-cols-1 ">
           {items &&
             items.map((item) => <LostAndFoundItem key={item.i} item={item} />)}
         </div>
