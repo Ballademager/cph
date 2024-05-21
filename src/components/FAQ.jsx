@@ -8,20 +8,20 @@ const FAQQuestion = ({ open: { open, setOpen }, question: { question, answer, te
 
   return (
     <li
-      className="flex flex-col shadow-boxbox px-6 md:px-10 py-4 md:py-6 lg:py-8 rounded-xl cursor-pointer"
+      className="flex flex-col shadow-boxbox px-6 md:px-10 py-4 md:py-4 lg:py-6 rounded-xl cursor-pointer"
       onClick={() => {
         setOpen(isOpen ? -1 : i);
         setHeight(contentRef.current.clientHeight);
       }}>
       <div className="flex justify-between items-center gap-2">
-        <p className="font-bold text-large sm:text-6 lg:text-5">{question}</p>
+        <p className="font-bold text-p sm:text-large lg:text-large">{question}</p>
 
         <svg
           width={40}
           height={40}
           data-slot="icon"
           fill="none"
-          stroke-width="2.5"
+          stroke-width="2"
           stroke="currentColor"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ const FAQQuestion = ({ open: { open, setOpen }, question: { question, answer, te
           height: isOpen ? height : 0,
         }}>
         <div className="h-fit flex flex-col gap-6" ref={contentRef}>
-          <p className="relative text-large mt-4">{answer}</p>
+          <p className="relative text-p lg:text-large mt-4">{answer}</p>
           <a className="bg-cph-blue text-cph-white font-large font-semibold px-11 py-3 rounded-lg self-start" href={hyperRef}>
             {text}
           </a>
