@@ -1,24 +1,22 @@
 ---
 import { Image } from "astro:assets";
 const { cardIcon, cardTitle, cardDescription, targetLocation } = Astro.props;
-import logo from "../images/logo.webp";
+import adImage from "../images/appAdImage.webp";
 ---
 
 <a href={targetLocation}>
   <div
-    class="flex shadow-xl justify-center items-stretch rounded-2xl overflow-hidden"
+    class="flex shadow-boxbox justify-center items-stretch rounded-2xl overflow-hidden"
   >
-    <div class="p-10 bg-cph-blue flex-1 flex justify-center items-center">
-      <Image src={logo} alt="" />
+    <div class="bg-cph-blue flex justify-center w-1/2">
+      <Image class="object-cover" src={adImage} alt="Image of phone using cph app" />
     </div>
-    <div class="p-10 flex-1 flex flex-col gap-2 items-center">
-      <!-- Temporary image until we import all images needed -->
+    <div class="p-10 flex flex-col items-center w-1/2 justify-between">
       <p class="font-bold text-6 text-center text-cph-blue">{cardTitle}</p>
-      <p class="text-small font-medium text-center">{cardDescription}</p>
-
-      <button
+      <p class="text-small font-medium text-center mb-4">{cardDescription}</p>
+      <p
         class="mt-2 bg-cph-blue rounded-md text-cph-white w-fit px-4 py-2 text-small font-medium"
-        >Learn More</button
+        >Læs mere</p
       >
     </div>
   </div>
