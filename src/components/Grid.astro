@@ -13,7 +13,7 @@ let classes = ["grid"];
 if (type === "2+2") {
   classes.push("grid-cols-2");
 } else if (type === "3+1") {
-  classes.push("grid-cols-3");
+  classes.push("grid-cols-1 md:grid-cols-3");
 }
 
 if (c) {
@@ -26,7 +26,7 @@ if (c) {
 
   {
     type === "3+1" && (
-      <div style="grid-column: 1/4;">
+      <div class="md:col-span-4">
         <slot name="third" />
       </div>
     )
