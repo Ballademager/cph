@@ -6,6 +6,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 import HalfnHalf from "../components/HalfnHalf.astro";
 import Hero from "../components/Hero.astro";
 import heroImage from "../images/heroSecurity.webp";
+import bagageinformation from "../images/bagageinformation.webp"
+import sikkerhedskontrol from "../images/sikkerhedskontrol.webp"
+import tilladtBagage from "../images/tilladtBagage.webp"
 import Grid from "../components/Grid.astro";
 import ThreeoneCard1 from "../components/ThreeoneCard1.astro";
 import ThreeoneCard2 from "../components/ThreeoneCard2.astro";
@@ -28,16 +31,22 @@ import { FAQ } from "../components/FAQ";
         cardTitle="Sikkerhedskontrol"
         cardDescription="Vil du vide, hvordan du nemt kommer igennem sikkerhedskontrollen i Københavns Lufthavn? Få gode tips og en guide til en hurtig og problemfri oplevelse her."
         targetLocation="https://www.cph.dk/praktisk/sikkerhedskontrol"
+        cardIcon={sikkerhedskontrol}
+        iconAlt="Securityikon"
       />
       <ThreeoneCard1
         cardTitle="Tilladt & ikke-tilladt i håndbagage"
         cardDescription="Er du i tvivl om, hvad der er tilladt i din håndbagage? Her er en praktisk liste med almindelige genstande, så du kan tjekke, om de er tilladt med i håndbagagen."
         targetLocation="https://www.cph.dk/praktisk/bagage/tilladt-og-ikke-tilladt-i-bagagen"
+        cardIcon={tilladtBagage}
+        iconAlt="Baggagetjekikon"
       />
       <ThreeoneCard1
         cardTitle="Bagageinformation"
         cardDescription="Har du yderligere spørgsmål om bagage, så som Odd-Size, Rejsen med dyr eller mistet bagage? Så kan du finde alt informationen her."
         targetLocation="https://www.cph.dk/praktisk/bagage"
+        cardIcon={bagageinformation}
+        iconAlt="Kuffertikon"
       />
       <ThreeoneCard2
         slot="third"
