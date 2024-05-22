@@ -6,6 +6,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
 import Grid from "../components/Grid.astro";
 import heroImage from "../images/heroIndex.webp";
+import parkering from "../images/handicapparkering.webp"
+import security from "../images/sikkerhedskontrol.webp"
+import hittegods from "../images/hittegods.webp"
+import kontakt from "../images/kontakt.webp"
 import FrontPageCard from "../components/FrontPageCard.astro";
 import { FAQ } from "../components/FAQ";
 ---
@@ -20,28 +24,32 @@ import { FAQ } from "../components/FAQ";
   <main>
     <Grid type="2+2" class="gap-5 w-full">
       <FrontPageCard
-        cardIcon=""
         cardTitle="Parkering"
         cardDescription="Se eller ændr din\n parkering her"
         targetLocation="/parkering"
+        cardIcon={parkering}
+        iconAlt="Bilikon"
       />
       <FrontPageCard
-        cardIcon=""
         cardTitle="Security"
         cardDescription="Få svar på vigtige spørgmål\n sikkerhedskontrol her"
         targetLocation="/security"
+        cardIcon={security}
+        iconAlt="Sikkerhedstjekikon"
       />
       <FrontPageCard
-        cardIcon=""
         cardTitle="Hittegods"
         cardDescription="Find din genstand, hvis den er\n mistet i CPH Lufthavn"
         targetLocation="/hittegods"
+        cardIcon={hittegods}
+        iconAlt="Hittegodsikon"
       />
       <FrontPageCard
-        cardIcon=""
         cardTitle="Kontakt"
         cardDescription="Kontak os i\n CPH kundeservice"
         targetLocation="/kontakt"
+        cardIcon={kontakt}
+        iconAlt="Kontaktikon"
       />
     </Grid>
 
