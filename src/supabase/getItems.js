@@ -24,3 +24,13 @@ export async function getItems(sortBy, filterBy, page = 1, pageSize = 6) {
 
   return await call;
 }
+
+export async function getReservation({ id, email }) {
+  const call = supabase
+    .from("reservationlist")
+    .select("*")
+    .filter("email", "eq", email.trim().toLowerCase())
+    .filter("reservation_numb", "eq", id.trim().toUpperCase());
+
+  return await call;
+}
