@@ -5,18 +5,6 @@ import { getItems } from "../supabase/getItems";
 import { useState, useEffect } from "react";
 import Pagination from "./Pagination";
 
-function randomPlace() {
-  const places = [
-    "Terminal 1",
-    "Terminal 2",
-    "Terminal 3",
-    "In Plane",
-    "Security",
-  ];
-
-  return places[Math.floor(Math.random() * places.length)];
-}
-
 export default function LostAndFound() {
   const [items, setItems] = useState([]);
   const [page, setPage] = useState(1);
@@ -34,12 +22,12 @@ export default function LostAndFound() {
 
       const filter = [
         undefined,
-        "Briefcase",
-        "Clothing",
-        "Wallet",
-        "Glasses",
-        "Umbrella",
-        "Headphones",
+        "Mindre Taske",
+        "Mobiltelefon / Tablet",
+        "Pung",
+        "Bærbar",
+        "Kamera",
+        "Høretelefoner",
       ][filterBy];
 
       const res = await getItems(sort, filter, page, pageSize);
@@ -111,12 +99,12 @@ export default function LostAndFound() {
             }
             options={[
               "None",
-              "Briefcase",
-              "Clothing",
-              "Wallet",
-              "Glasses",
-              "Umbrella",
-              "Headphones",
+              "Mindre Taske",
+              "Mobiltelefon / Tablet",
+              "Pung",
+              "Bærbar",
+              "Kamera",
+              "Høretelefoner",
             ]}
             hideArrow
             selected={filterBy}
