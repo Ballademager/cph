@@ -109,7 +109,7 @@ export default function Header() {
           </ul>
           <div className="flex-right">
             <a href="https://www.taxfree-heinemann.dk/da/cph/" aria-label="Taxfree">
-              <img className="taxfree" src="/src/images/taxfree.webp" alt="" />
+              <img className="taxfree" src="public/taxfree.webp" alt="" />
             </a>
             <a href="">Log ind</a>
             <button
@@ -118,7 +118,7 @@ export default function Header() {
                 toggleOpen();
               }}
               aria-label="change language">
-              <img className="flag" src={`/src/images/${lang === "dk" ? "denmark" : "england"}.svg`} alt={lang === "dk" ? "Danish flag" : "English flag"} />
+              <img className="flag" src={`public/${lang === "dk" ? "denmark" : "england"}.svg`} alt={lang === "dk" ? "Danish flag" : "English flag"} />
               <svg
                 width={28}
                 height={28}
@@ -141,7 +141,7 @@ export default function Header() {
                     {lang !== "dk" && (
                       <li>
                         <button className="inside-btn" onClick={() => switchLanguage("dk")}>
-                          <img src="/src/images/denmark.svg" alt="Danish flag" />
+                          <img src="public/denmark.svg" alt="Danish flag" />
                           Danish
                         </button>
                       </li>
@@ -149,7 +149,7 @@ export default function Header() {
                     {lang !== "en" && (
                       <li>
                         <button className="inside-btn" onClick={() => switchLanguage("en")}>
-                          <img src="/src/images/england.svg" alt="English flag" />
+                          <img src="public/england.svg" alt="English flag" />
                           English
                         </button>
                       </li>
@@ -159,14 +159,14 @@ export default function Header() {
               )}
             </button>
             <div className="search">
-              <img src="src/images/search.svg" alt="search on site" />
+              <img src="public/search.svg" alt="search on site" />
             </div>
           </div>
         </>
       ) : (
         <div className="flex-right">
           <div className="search">
-            <img src="src/images/search.svg" alt="search on site" />
+            <img src="public/search.svg" alt="search on site" />
           </div>
           <div className={"burger-menu " + (active ? "active" : "")} onClick={handleBurgerClick}>
             <span className="bar1"></span>
@@ -181,7 +181,7 @@ export default function Header() {
                   toggleOpen();
                 }}
                 aria-label="change language">
-                <img className="flag" src={`src/images/${lang === "dk" ? "denmark" : "england"}.svg`} alt={lang === "dk" ? "Danish flag" : "English flag"} />
+                <img className="flag" src={`public/${lang === "dk" ? "denmark" : "england"}.svg`} alt={lang === "dk" ? "Danish flag" : "English flag"} />
                 <svg
                   width={28}
                   height={28}
@@ -204,7 +204,7 @@ export default function Header() {
                       {lang !== "dk" && (
                         <li>
                           <button className="inside-btn" onClick={() => switchLanguage("dk")}>
-                            <img src="src/images/denmark.svg" alt="Danish flag" />
+                            <img src="public/denmark.svg" alt="Danish flag" />
                             Danish
                           </button>
                         </li>
@@ -212,7 +212,7 @@ export default function Header() {
                       {lang !== "en" && (
                         <li>
                           <button className="inside-btn" onClick={() => switchLanguage("en")}>
-                            <img src="src/images/england.svg" alt="English flag" />
+                            <img src="public/england.svg" alt="English flag" />
                             English
                           </button>
                         </li>
@@ -252,7 +252,7 @@ export default function Header() {
               </li>
               <li className="taxfree-li">
                 <a href="https://www.taxfree-heinemann.dk/da/cph/" aria-label="Taxfree">
-                  <img className="taxfree" src="src/images/taxfree.webp" alt="" />
+                  <img className="taxfree" src="public/taxfree.webp" alt="" />
                 </a>
               </li>
             </ul>
