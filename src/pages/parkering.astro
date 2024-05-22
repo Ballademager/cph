@@ -7,6 +7,9 @@ import ThreeoneCard1 from "../components/ThreeoneCard1.astro";
 import ThreeoneCard2 from "../components/ThreeoneCard2.astro";
 import Hero from "../components/Hero.astro";
 import heroImage from "../images/heroParkering.webp";
+import handicapparkering from "../images/handicapparkering.webp"
+import kvittering from "../images/kvittering.webp"
+import klagevejledning from "../images/klagevejledning.webp"
 import Grid from "../components/Grid.astro";
 import GetParking from "../components/GetParking.astro";
 import MyReservation from "../components/MyReservation.astro";
@@ -19,6 +22,7 @@ import { FAQ } from "../components/FAQ.jsx";
     heroDescription="Få information om dine parkeringsmuligheder og find hjælp til alle spørgsmål vedrørende parkering i CPH"
     heroImage={heroImage}
     heroImageAlt="Parkering i CPH Lufthavn Billede"
+
   />
   <main>
     <MyReservation />
@@ -31,17 +35,23 @@ import { FAQ } from "../components/FAQ.jsx";
       <ThreeoneCard1
         cardTitle="Handicapparkering"
         cardDescription="I CPH Airport er der mulighed for handicapparkering. Du kan finde den information du skal bruge her. "
-        targetLocation=""
+        targetLocation="https://www.cph.dk/parkering-transport/handicapparkering"
+        cardIcon={handicapparkering}
+        iconAlt="Handicapikon"
       />
       <ThreeoneCard1
         cardTitle="Print kvittering"
         cardDescription="Har du brug for at printe din kvittering fra din seneste parkering i Københavns Lufthavn, så kan du kontakte vores kundeservice ved at klikke her."
-        targetLocation=""
+        targetLocation="/kontakt"
+        cardIcon={kvittering}
+        iconAlt="Checkmarkikon"
       />
       <ThreeoneCard1
         cardTitle="Klagevejledning"
         cardDescription="Har du brug for klage skal du kontakte kundeservice. Du finder mere information på denne side. "
-        targetLocation=""
+        targetLocation="https://www.cph.dk/kundeservice/parkering/klageadgang"
+        cardIcon={klagevejledning}
+        iconAlt="Papirikon"
       />
       <ThreeoneCard2
         slot="third"

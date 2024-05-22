@@ -1,17 +1,16 @@
 ---
-const { cardIcon, cardTitle, cardDescription, targetLocation } = Astro.props;
-import logo from "../images/logo.webp";
+const { cardIcon, iconAlt, cardTitle, cardDescription, targetLocation } = Astro.props;
+import { Image } from "astro:assets";
 ---
 
 <a href={targetLocation} class="h-full">
   <div
     class="flex flex-col-reverse shadow-card px-6 py-4 gap-3 justify-end items-center rounded-xl h-full xl:flex-row xl:justify-center xl:items-start"
   >
-    <!-- Temporary src logo until we import all logos needed -->
     <div>
       <p class="font-bold my-2">{cardTitle}</p>
       <p class="text-small">{cardDescription}</p>
     </div>
-    <img src={logo.src} width={50} height={50} class="self-center" />
+    <Image src={cardIcon} alt={iconAlt} class="self-center w-14"/>
   </div>
 </a>
