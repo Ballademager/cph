@@ -1,11 +1,7 @@
 import { useState, useRef } from "react";
 import Markdown from "react-markdown";
 
-const FAQQuestion = ({
-  open: { open, setOpen },
-  question: { question, answer, text, hyperRef },
-  i,
-}) => {
+const FAQQuestion = ({ open: { open, setOpen }, question: { question, answer, text, hyperRef }, i }) => {
   const [height, setHeight] = useState(0);
   const contentRef = useRef(null);
 
@@ -17,12 +13,9 @@ const FAQQuestion = ({
       onClick={() => {
         setOpen(isOpen ? -1 : i);
         setHeight(contentRef.current.clientHeight);
-      }}
-    >
+      }}>
       <div className="flex justify-between items-center gap-2">
-        <p className="font-bold text-p sm:text-large lg:text-large">
-          {question}
-        </p>
+        <p className="font-bold text-p sm:text-large lg:text-large">{question}</p>
 
         <svg
           width={40}
@@ -37,13 +30,8 @@ const FAQQuestion = ({
           style={{
             transform: isOpen ? `rotate(180deg)` : "rotate(0deg)",
           }}
-          className="transition-transform duration-300 ease-in-out min-w-10"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="m19.5 8.25-7.5 7.5-7.5-7.5"
-          ></path>
+          className="transition-transform duration-300 ease-in-out min-w-10">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
         </svg>
       </div>
 
@@ -51,18 +39,12 @@ const FAQQuestion = ({
         className="relative overflow-hidden transition-height duration-300 ease-in-out"
         style={{
           height: isOpen ? height : 0,
-        }}
-      >
+        }}>
         <div className="h-fit flex flex-col gap-6" ref={contentRef}>
-          <Markdown className="prose prose-zinc lg:prose-lg prose-a:text-light-blue font-medium relative mt-4">
-            {answer.trim()}
-          </Markdown>
+          <Markdown className="prose prose-zinc lg:prose-lg prose-a:text-light-blue font-regular relative mt-4">{answer.trim()}</Markdown>
 
           {hyperRef && (
-            <a
-              className="bg-cph-blue text-cph-white font-large font-semibold px-11 py-3 rounded-lg self-start"
-              href={hyperRef}
-            >
+            <a target="_blank" className="bg-cph-blue text-cph-white font-large font-semibold px-11 py-3 rounded-lg self-start" href={hyperRef}>
               {text}
             </a>
           )}
@@ -78,9 +60,7 @@ export function FAQ({ faqQuestions, headlineText, paragraphText }) {
   return (
     <div className="grid py-10 w-full gap-4">
       <div>
-        <h2 className="text-5 sm:text-4 font-bold text-cph-blue py-3">
-          {headlineText}
-        </h2>
+        <h2 className="text-5 sm:text-4 font-bold text-cph-blue py-3">{headlineText}</h2>
         <p className="text-p md:text-large">{paragraphText}</p>
       </div>
       <div>
