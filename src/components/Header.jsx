@@ -86,7 +86,9 @@ export default function Header() {
 
   return (
     <header>
-      <img className="logo" src="src/images/logo.webp" alt="" />
+      <a href="/">
+        <img className="logo" src="/logo.webp" alt="logo" />
+      </a>
       {screenWidth > 1024 ? (
         <>
           <ul className="upper-nav">

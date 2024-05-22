@@ -27,6 +27,9 @@ header {
     height: 62px;
   }
 }
+a:has(.logo) {
+  align-self: center;
+}
 .logo {
   max-width: 54px;
 
