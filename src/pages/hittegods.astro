@@ -25,7 +25,7 @@ import { FAQ } from "../components/FAQ.jsx";
       paragraph="På listen nedenfor kan du finde alle indleverede genstande, som registreret af hittegods. Genstandene beholdes i 3 døgn efter vi har modtaget dem, hvorefter de sendes til politiets hittegodsafdeling."
     />
     <div class="py-8 w-full"><LostAndFound client:load /></div>
-    <div>
+    <div class="my-8">
       <h2>Fandt du ikke din genstand på listen?</h2>
       <p>
         Mindre værdifulde genstand, som for eksempel tøj og bøger registreres
@@ -38,9 +38,9 @@ import { FAQ } from "../components/FAQ.jsx";
         svar i bunden af siden.
       </p>
     </div>
-    <div class="flex gap-2 items-stretch flex-col lg:flex-row pt-4">
-      <Contact />
+    <div class="flex gap-6 lg:gap-2 items-stretch flex-col lg:flex-row pt-4 my-4 lg:my-12">
       <BlueCross />
+      <Contact />
     </div>
     <FAQ
       client:load
