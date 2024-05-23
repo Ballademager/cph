@@ -50,10 +50,6 @@ a:has(.logo) {
     }
   }
 }
-.upper-li:not(:nth-child(2)) > a:hover {
-  color: red;
-}
-
 .flex-right {
   display: flex;
   align-items: center;
