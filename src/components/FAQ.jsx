@@ -20,9 +20,9 @@ const FAQQuestion = ({
       }}
     >
       <div className="flex justify-between items-center gap-2">
-        <p className="font-bold text-p sm:text-large lg:text-large">
+        <h3 className="font-bold text-p sm:text-large lg:text-large">
           {question}
-        </p>
+        </h3>
 
         <svg
           width={40}

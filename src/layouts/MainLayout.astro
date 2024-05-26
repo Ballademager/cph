@@ -13,6 +13,7 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="CPH Lufthavns Kundeservice side" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +26,7 @@ import Footer from "../components/Footer.astro";
   </head>
   <body>
     <Header client:load />
-      <slot />
+    <slot />
     <Footer />
   </body>
 </html>

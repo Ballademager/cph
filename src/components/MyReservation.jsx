@@ -40,6 +40,7 @@ export default function MyReservation() {
           <input
             type="email"
             id="email"
+            aria-label="email address"
             content={email}
             onChange={(e) => setEmail(e.target.value)}
             class="block w-full p-3 border border-grey-lighter rounded-md h-14"
@@ -54,6 +55,7 @@ export default function MyReservation() {
           <input
             type="text"
             id="reservationNumber"
+            aria-label="reservation number"
             content={reservationNumber}
             onChange={(e) => setReservationNumber(e.target.value)}
             class="block w-full p-3 border border-grey-lighter rounded-md h-14"

@@ -1,5 +1,6 @@
 ---
-const { cardIcon, iconAlt, cardTitle, cardDescription, targetLocation } = Astro.props;
+const { cardIcon, iconAlt, cardTitle, cardDescription, targetLocation } =
+  Astro.props;
 import { Image } from "astro:assets";
 ---
 
@@ -7,8 +8,8 @@ import { Image } from "astro:assets";
   <div
     class="flex flex-col shadow-card py-2 md:py-6 px-4 md:px-8 justify-center items-center rounded-xl gap-1 h-full"
   >
-    <Image src={cardIcon} alt={iconAlt} class="self-center w-14"/>
-    <p class="font-bold mt-2 md:text-large">{cardTitle}</p>
+    <Image src={cardIcon} alt={iconAlt} class="self-center w-14" />
+    <h3 class="font-bold mt-2 md:text-large">{cardTitle}</h3>
     <p class="text-small lg:px-8 text-center md:text-p">
       {
         cardDescription.split("\n").map((a, i) => (
