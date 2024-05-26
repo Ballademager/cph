@@ -1,35 +1,41 @@
 ---
-const {pageHeading, paragraph} = Astro.props;
+const { pageHeading, paragraph } = Astro.props;
 ---
 
 <div>
-    <h1>{pageHeading}<h1/>
-    <p>{paragraph}</p>
+  <h1>
+    {pageHeading}
+  </h1>
+  <p>{paragraph}</p>
 </div>
 
 <style>
-    h1 {
-        color: var(--cph-blue);
-        font-size: var(--fs-2);
-        font-weight: var(--fw-semi-bold);
-        @media (width<1024px) {
-        font-size: var(--fs-3);
-        line-height: 120%;
-    }
-        @media (width<640px) {
-        font-size: var(--fs-4);
-    }
-        @media (width<482px) {
-        font-size: var(--fs-5);
-    }
-    }
-    p {
-        color:var(--grey-text) ;
-        font-size: var(--fs-large);
-        text-wrap: pretty;
+  h1 {
+    color: var(--cph-blue);
+    font-size: var(--fs-2);
+    font-weight: var(--fw-semi-bold);
 
-        @media (width<1024px) {
-        font-size: var(--fs-p);
+    @media (width<1024px) {
+      font-size: var(--fs-3);
+      line-height: 120%;
     }
+
+    @media (width<640px) {
+      font-size: var(--fs-4);
     }
+
+    @media (width<482px) {
+      font-size: var(--fs-5);
+    }
+  }
+
+  p {
+    color: var(--grey-text);
+    font-size: var(--fs-large);
+    text-wrap: pretty;
+
+    @media (width<1024px) {
+      font-size: var(--fs-p);
+    }
+  }
 </style>

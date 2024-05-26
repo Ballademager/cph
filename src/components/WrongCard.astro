@@ -5,8 +5,9 @@ import { Image } from "astro:assets";
 
 <a href={href} class="redirect-card">
   <div class="img-container">
-    <img src={cardImage.src} alt="" />
+    <Image src={cardImage} alt="" />
   </div>
+
   <div class="card-content">
     <h3>{cardTitle}</h3>
     <p>{cardText}</p>

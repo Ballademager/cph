@@ -92,25 +92,68 @@ export default function Header() {
       {screenWidth > 1024 ? (
         <>
           <ul className="upper-nav">
-            <li className="upper-li" onMouseEnter={() => mouseEnter("Flyinformation")} onMouseLeave={mouseLeave}>
+            <li
+              className="upper-li"
+              onMouseEnter={() => mouseEnter("Flyinformation")}
+              onMouseLeave={mouseLeave}
+            >
               <a href="">Flyinformation</a>
-              {showDropDown === "Flyinformation" && <DropDown item="Flyinformation" onMouseEnter={dropDownEnter} onMouseLeave={dropDownLeave} />}
+              {showDropDown === "Flyinformation" && (
+                <DropDown
+                  item="Flyinformation"
+                  onMouseEnter={dropDownEnter}
+                  onMouseLeave={dropDownLeave}
+                />
+              )}
             </li>
-            <li className="upper-li" onMouseEnter={() => mouseEnter("Praktisk")} onMouseLeave={mouseLeave}>
+            <li
+              className="upper-li"
+              onMouseEnter={() => mouseEnter("Praktisk")}
+              onMouseLeave={mouseLeave}
+            >
               <a href="">Praktisk</a>
-              {showDropDown === "Praktisk" && <DropDown item="Praktisk" onMouseEnter={dropDownEnter} onMouseLeave={dropDownLeave} />}
+              {showDropDown === "Praktisk" && (
+                <DropDown
+                  item="Praktisk"
+                  onMouseEnter={dropDownEnter}
+                  onMouseLeave={dropDownLeave}
+                />
+              )}
             </li>
-            <li className="upper-li" onMouseEnter={() => mouseEnter("Parkering")} onMouseLeave={mouseLeave}>
+            <li
+              className="upper-li"
+              onMouseEnter={() => mouseEnter("Parkering")}
+              onMouseLeave={mouseLeave}
+            >
               <a href="">Parkering</a>
-              {showDropDown === "Parkering" && <DropDown item="Parkering" onMouseEnter={dropDownEnter} onMouseLeave={dropDownLeave} />}
+              {showDropDown === "Parkering" && (
+                <DropDown
+                  item="Parkering"
+                  onMouseEnter={dropDownEnter}
+                  onMouseLeave={dropDownLeave}
+                />
+              )}
             </li>
-            <li className="upper-li" onMouseEnter={() => mouseEnter("Butikker & Spisesteder")} onMouseLeave={mouseLeave}>
+            <li
+              className="upper-li"
+              onMouseEnter={() => mouseEnter("Butikker & Spisesteder")}
+              onMouseLeave={mouseLeave}
+            >
               <a href="">Butikker & Spisesteder</a>
-              {showDropDown === "Butikker & Spisesteder" && <DropDown item="Butikker & Spisesteder" onMouseEnter={dropDownEnter} onMouseLeave={dropDownLeave} />}
+              {showDropDown === "Butikker & Spisesteder" && (
+                <DropDown
+                  item="Butikker & Spisesteder"
+                  onMouseEnter={dropDownEnter}
+                  onMouseLeave={dropDownLeave}
+                />
+              )}
             </li>
           </ul>
           <div className="flex-right">
-            <a href="https://www.taxfree-heinemann.dk/da/cph/" aria-label="Taxfree">
+            <a
+              href="https://www.taxfree-heinemann.dk/da/cph/"
+              aria-label="Taxfree"
+            >
               <img className="taxfree" src="/taxfree.webp" alt="" />
             </a>
             <a href="">Log ind</a>
@@ -119,8 +162,13 @@ export default function Header() {
               onClick={() => {
                 toggleOpen();
               }}
-              aria-label="change language">
-              <img className="flag" src={`/${lang === "dk" ? "denmark" : "england"}.svg`} alt={lang === "dk" ? "Danish flag" : "English flag"} />
+              aria-label="change language"
+            >
+              <img
+                className="flag"
+                src={`/${lang === "dk" ? "denmark" : "england"}.svg`}
+                alt={lang === "dk" ? "Danish flag" : "English flag"}
+              />
               <svg
                 width={28}
                 height={28}
@@ -134,15 +182,23 @@ export default function Header() {
                 style={{
                   transform: isOpen ? `rotate(180deg)` : "rotate(0deg)",
                 }}
-                className="transition-transform duration-300 ease-in-out min-w-10">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                className="transition-transform duration-300 ease-in-out min-w-10"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                ></path>
               </svg>
               {isOpen && (
                 <div className="lang-drop">
                   <ul className="" role="menu">
                     {lang !== "dk" && (
                       <li>
-                        <button className="inside-btn" onClick={() => switchLanguage("dk")}>
+                        <button
+                          className="inside-btn"
+                          onClick={() => switchLanguage("dk")}
+                        >
                           <img src="/denmark.svg" alt="Danish flag" />
                           Danish
                         </button>
@@ -150,7 +206,10 @@ export default function Header() {
                     )}
                     {lang !== "en" && (
                       <li>
-                        <button className="inside-btn" onClick={() => switchLanguage("en")}>
+                        <button
+                          className="inside-btn"
+                          onClick={() => switchLanguage("en")}
+                        >
                           <img src="/england.svg" alt="English flag" />
                           English
                         </button>
@@ -170,7 +229,10 @@ export default function Header() {
           <div className="search">
             <img src="/search.svg" alt="search on site" />
           </div>
-          <div className={"burger-menu " + (active ? "active" : "")} onClick={handleBurgerClick}>
+          <div
+            className={"burger-menu " + (active ? "active" : "")}
+            onClick={handleBurgerClick}
+          >
             <span className="bar1"></span>
             <span className="bar2"></span>
             <span className="bar3"></span>
@@ -182,8 +244,13 @@ export default function Header() {
                 onClick={() => {
                   toggleOpen();
                 }}
-                aria-label="change language">
-                <img className="flag" src={`/${lang === "dk" ? "denmark" : "england"}.svg`} alt={lang === "dk" ? "Danish flag" : "English flag"} />
+                aria-label="change language"
+              >
+                <img
+                  className="flag"
+                  src={`/${lang === "dk" ? "denmark" : "england"}.svg`}
+                  alt={lang === "dk" ? "Danish flag" : "English flag"}
+                />
                 <svg
                   width={28}
                   height={28}
@@ -197,15 +264,23 @@ export default function Header() {
                   style={{
                     transform: isOpen ? `rotate(180deg)` : "rotate(0deg)",
                   }}
-                  className="transition-transform duration-300 ease-in-out min-w-10">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                  className="transition-transform duration-300 ease-in-out min-w-10"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  ></path>
                 </svg>
                 {isOpen && (
                   <div className="lang-drop">
                     <ul className="" role="menu">
                       {lang !== "dk" && (
                         <li>
-                          <button className="inside-btn" onClick={() => switchLanguage("dk")}>
+                          <button
+                            className="inside-btn"
+                            onClick={() => switchLanguage("dk")}
+                          >
                             <img src="/denmark.svg" alt="Danish flag" />
                             Danish
                           </button>
@@ -213,7 +288,10 @@ export default function Header() {
                       )}
                       {lang !== "en" && (
                         <li>
-                          <button className="inside-btn" onClick={() => switchLanguage("en")}>
+                          <button
+                            className="inside-btn"
+                            onClick={() => switchLanguage("en")}
+                          >
                             <img src="/england.svg" alt="English flag" />
                             English
                           </button>
@@ -228,32 +306,67 @@ export default function Header() {
               </a>
             </div>
             <ul className="outer-list">
-              <li className={"menu-item " + (liOneActive ? "active" : "")} onClick={handleLiOneClick}>
+              <li
+                className={"menu-item " + (liOneActive ? "active" : "")}
+                onClick={handleLiOneClick}
+              >
                 <p>Flyinformation</p>
-                <CSSTransition in={liOneActive} timeout={300} classNames="inner-list" unmountOnExit>
+                <CSSTransition
+                  in={liOneActive}
+                  timeout={300}
+                  classNames="inner-list"
+                  unmountOnExit
+                >
                   <InnerList itemKey="flyinformationContent" />
                 </CSSTransition>
               </li>
-              <li className={"menu-item " + (liTwoActive ? "active" : "")} onClick={handleLiTwoClick}>
+              <li
+                className={"menu-item " + (liTwoActive ? "active" : "")}
+                onClick={handleLiTwoClick}
+              >
                 <p>Praktisk</p>
-                <CSSTransition in={liTwoActive} timeout={300} classNames="inner-list" unmountOnExit>
+                <CSSTransition
+                  in={liTwoActive}
+                  timeout={300}
+                  classNames="inner-list"
+                  unmountOnExit
+                >
                   <InnerList itemKey="praktiskContent" />
                 </CSSTransition>
               </li>
-              <li className={"menu-item " + (liThreeActive ? "active" : "")} onClick={handleLiThreeClick}>
+              <li
+                className={"menu-item " + (liThreeActive ? "active" : "")}
+                onClick={handleLiThreeClick}
+              >
                 <p>Parkering</p>
-                <CSSTransition in={liThreeActive} timeout={300} classNames="inner-list" unmountOnExit>
+                <CSSTransition
+                  in={liThreeActive}
+                  timeout={300}
+                  classNames="inner-list"
+                  unmountOnExit
+                >
                   <InnerList itemKey="parkeringContent" />
                 </CSSTransition>
               </li>
-              <li className={"menu-item " + (liFourActive ? "active" : "")} onClick={handleLiFourClick}>
+              <li
+                className={"menu-item " + (liFourActive ? "active" : "")}
+                onClick={handleLiFourClick}
+              >
                 <p>Butikker & Spisesteder</p>
-                <CSSTransition in={liFourActive} timeout={300} classNames="inner-list" unmountOnExit>
+                <CSSTransition
+                  in={liFourActive}
+                  timeout={300}
+                  classNames="inner-list"
+                  unmountOnExit
+                >
                   <InnerList itemKey="butikkerSpisestederContent" />
                 </CSSTransition>
               </li>
               <li className="taxfree-li">
-                <a href="https://www.taxfree-heinemann.dk/da/cph/" aria-label="Taxfree">
+                <a
+                  href="https://www.taxfree-heinemann.dk/da/cph/"
+                  aria-label="Taxfree"
+                >
                   <img className="taxfree" src="/taxfree.webp" alt="" />
                 </a>
               </li>
