@@ -57,6 +57,10 @@
   --grey-dark: #5b646d;
   --grey-text: #333333;
 
+  --box-shadow: 0 5px 20px rgba(7, 19, 66, 0.15);
+  --box-shadow-medium: 0 5px 20px rgba(7, 19, 66, 0.25);
+  --box-shadow-hover: 0 5px 20px rgba(7, 19, 66, 0.35);
+
   /* Font-weights */
   --fw-light: 300;
   --fw-regular: 400;

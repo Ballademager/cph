@@ -18,10 +18,15 @@ import { Image } from "astro:assets";
 <style>
   .redirect-card {
     max-width: 300px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 13px;
+    box-shadow: var(--box-shadow);
     border-radius: 5px;
     overflow: hidden;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
+
+    &:hover {
+      box-shadow: var(--box-shadow-hover);
+      }
     @media (width<1024px) {
       max-width: 225px;
     }
@@ -63,10 +68,13 @@ import { Image } from "astro:assets";
       font-size: var(--fs-small);
     }
   }
-  span {
-    color: var(--light-blue);
+  h4 span {
+    color: var(--cph-blue);
     font-weight: var(--fw-semi-bold);
     text-transform: lowercase;
+  }
+  .redirect-card:hover h4 span{
+    color: var(--light-blue);
   }
   .img-container {
     width: 100%;
