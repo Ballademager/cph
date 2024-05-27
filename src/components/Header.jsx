@@ -78,7 +78,7 @@ export default function Header() {
 
   const switchLanguage = (selectedLang) => {
     setLang(selectedLang);
-    setIsOpen(false);
+    setTimeout(() => setIsOpen(false), 0);
   };
   const toggleOpen = () => {
     setIsOpen((prevOpen) => !prevOpen);
